@@ -1,0 +1,7 @@
+{"nav":{"home":"Home","about":"About","projects":"Projects","skills":"Skills","contact":"Contact"},
+"brand":"Ahmed Amasha","cv":"Download CV","cvMissing":"CV not available yet","contactCta":"Contact me","explore":"Explore projects",
+"theme":"Toggle theme","lang":"العربية","menu":"Menu",
+"hero":{"hello":"Hello, I'm","name":"Ahmed Amasha","title":"Full-Stack Software Engineer",
+"desc":"I build scalable web applications, business management systems, and reliable digital solutions. My background combines software engineering with IT infrastructure, networking, security fundamentals, and cloud technologies.",
+"available":"Available for opportunities","stack":"Main stack"},
+"footer":{"rights":"All rights reserved."}}

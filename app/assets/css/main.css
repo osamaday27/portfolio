@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+:root{--bg:#FFFFFF;--bg-2:#F5F5F5;--card:#FFFFFF;--elev:#F5F5F5;--text:#0A0A0A;--text-2:#525252;--muted:#737373;--line:#D4D4D4;--olive:#646B4F}
+:root.dark{--bg:#050505;--bg-2:#0A0A0A;--card:#111111;--elev:#171717;--text:#FFFFFF;--text-2:#A3A3A3;--muted:#737373;--line:#262626;--olive:#737B5A}
+@theme inline{
+  --color-bg:var(--bg);--color-bg2:var(--bg-2);--color-card:var(--card);--color-elev:var(--elev);
+  --color-fg:var(--text);--color-fg2:var(--text-2);--color-muted:var(--muted);--color-line:var(--line);--color-olive:var(--olive);
+  --font-display:'Space Grotesk','IBM Plex Sans Arabic',sans-serif;
+  --font-sans:'Inter','IBM Plex Sans Arabic',sans-serif;
+  --font-mono:'JetBrains Mono',monospace}
+*,*::before,*::after{border-radius:0!important}
+html{scroll-behavior:smooth;background:var(--bg);color:var(--text);transition:background-color .25s,color .25s}
+body{font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+html[dir=rtl] body{font-family:'IBM Plex Sans Arabic',sans-serif;line-height:1.9}
+html[dir=rtl] .font-display{font-family:'Cairo','IBM Plex Sans Arabic',sans-serif}
+:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+.container-x{max-width:1200px;margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border:1px solid var(--line);font-weight:500;transition:background-color .2s,border-color .2s}
+.btn:hover{border-color:var(--olive)}
+.btn-primary{background:var(--olive);border-color:var(--olive);color:#fff}
+.btn-primary:hover{filter:brightness(1.1)}
+.btn[aria-disabled=true]{opacity:.5;pointer-events:none}
+.label-mono{font-family:var(--font-mono);font-size:.8rem;color:var(--muted)}
+.page-enter-active,.page-leave-active{transition:opacity .2s}
+.page-enter-from,.page-leave-to{opacity:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
