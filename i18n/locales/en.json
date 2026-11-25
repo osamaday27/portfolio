@@ -1,7 +1,140 @@
-{"nav":{"home":"Home","about":"About","projects":"Projects","skills":"Skills","contact":"Contact"},
-"brand":"Ahmed Amasha","cv":"Download CV","cvMissing":"CV not available yet","contactCta":"Contact me","explore":"Explore projects",
-"theme":"Toggle theme","lang":"العربية","menu":"Menu",
-"hero":{"hello":"Hello, I'm","name":"Ahmed Amasha","title":"Full-Stack Software Engineer",
-"desc":"I build scalable web applications, business management systems, and reliable digital solutions. My background combines software engineering with IT infrastructure, networking, security fundamentals, and cloud technologies.",
-"available":"Available for opportunities","stack":"Main stack"},
-"footer":{"rights":"All rights reserved."}}
+{
+ "nav": {
+  "home": "Home",
+  "about": "About",
+  "projects": "Projects",
+  "skills": "Skills",
+  "contact": "Contact"
+ },
+ "brand": "Ahmed Amasha",
+ "cv": "Download CV",
+ "cvMissing": "CV not available yet",
+ "contactCta": "Contact me",
+ "explore": "Explore projects",
+ "theme": "Toggle theme",
+ "lang": "العربية",
+ "menu": "Menu",
+ "hero": {
+  "hello": "Hello, I'm",
+  "name": "Ahmed Amasha",
+  "title": "Full-Stack Software Engineer",
+  "desc": "I build scalable web applications, business management systems, and reliable digital solutions. My background combines software engineering with IT infrastructure, networking, security fundamentals, and cloud technologies.",
+  "available": "Available for opportunities",
+  "stack": "Main stack"
+ },
+ "footer": {
+  "rights": "All rights reserved."
+ },
+ "projects": {
+  "pending": "Screenshot pending",
+  "noDesc": "Description will be added.",
+  "caseStudy": "Case study",
+  "open": "Open image",
+  "close": "Close",
+  "intro": "Selected repositories. Content is curated locally and enriched with live GitHub data.",
+  "live": "GitHub data: live",
+  "local": "GitHub data: unavailable, showing local data",
+  "filter": "Filter projects",
+  "empty": "No projects in this category yet.",
+  "demo": "Live demo",
+  "preparing": "This case study is being prepared."
+ },
+ "cat": {
+  "all": "All projects",
+  "web": "Web applications",
+  "backend": "Backend systems",
+  "ecommerce": "E-commerce",
+  "healthcare": "Healthcare systems",
+  "management": "Management systems",
+  "education": "Education platforms",
+  "business": "Business websites",
+  "api": "APIs",
+  "ui": "UI/UX"
+ },
+ "case": {
+  "overview": "Project overview",
+  "problem": "Business problem",
+  "objectives": "Objectives",
+  "role": "My role",
+  "architecture": "Technical architecture",
+  "database": "Database structure",
+  "features": "Main features",
+  "challenges": "Development challenges",
+  "solutions": "Solutions",
+  "screens": "Application screenshots",
+  "related": "Related projects"
+ },
+ "skills": {
+  "title": "Skills & expertise",
+  "intro": "Grouped by discipline. Proficiency levels appear only once verified.",
+  "dev": "Software development",
+  "design": "Software engineering & system design",
+  "network": "Networking & infrastructure",
+  "security": "Cybersecurity & application security",
+  "cloud": "Cloud computing & deployment",
+  "database": "Database engineering",
+  "pm": "Project management",
+  "tools": "Development tools"
+ },
+ "level": {
+  "core": "Core experience",
+  "working": "Working knowledge",
+  "fundamentals": "Fundamentals"
+ },
+ "about": {
+  "title": "About Ahmed Amasha",
+  "intro": "I am a software engineer who works from business requirements to deployed applications, with a practical background in IT support, networking and security fundamentals.",
+  "approach": "How I work",
+  "experience": "Professional experience",
+  "step": {
+   "req": "Understand business requirements",
+   "flow": "Analyze system workflows",
+   "db": "Design database structures",
+   "tech": "Select suitable technologies",
+   "logic": "Implement application logic",
+   "api": "Build secure APIs",
+   "test": "Test and deploy",
+   "maintain": "Maintain and improve"
+  }
+ },
+ "exp": {
+  "it": {
+   "title": "IT & Network Support Technician",
+   "desc": "Editable: add responsibilities here."
+  },
+  "pc": {
+   "title": "Project Coordinator",
+   "desc": "Editable: add responsibilities here."
+  },
+  "be": {
+   "title": "Backend Developer (Laravel)",
+   "desc": "Editable: add responsibilities here."
+  }
+ },
+ "contact": {
+  "title": "Let's build something together.",
+  "send": "Send message",
+  "note": "This opens your email app with the message prepared.",
+  "opened": "Your email app should open now. If it does not, write to the address shown on this page.",
+  "f": {
+   "name": "Full name",
+   "email": "Email",
+   "subject": "Subject",
+   "message": "Message",
+   "type": "Inquiry type"
+  },
+  "v": {
+   "required": "This field is required.",
+   "email": "Enter a valid email address.",
+   "message": "Write at least 10 characters."
+  },
+  "type": {
+   "fullstack": "Full-stack developer opportunity",
+   "backend": "Backend developer opportunity",
+   "it": "IT support opportunity",
+   "project": "Software development project",
+   "collab": "Technical collaboration",
+   "other": "Other"
+  }
+ }
+}

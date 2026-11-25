@@ -1,5 +1,5 @@
 # Ahmed Amasha — Portfolio (Nuxt 4)
-Step 1 of 3: foundation, design system, header/footer, theme, i18n, Home hero.
+Steps 1-2 of 3: foundation, pages, projects explorer, case studies, contact.
 ```
 npm install && npm run dev
 ```
