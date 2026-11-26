@@ -95,7 +95,8 @@
    "api": "Build secure APIs",
    "test": "Test and deploy",
    "maintain": "Maintain and improve"
-  }
+  },
+  "present": "Present"
  },
  "exp": {
   "it": {
@@ -114,8 +115,6 @@
  "contact": {
   "title": "Let's build something together.",
   "send": "Send message",
-  "note": "This opens your email app with the message prepared.",
-  "opened": "Your email app should open now. If it does not, write to the address shown on this page.",
   "f": {
    "name": "Full name",
    "email": "Email",
@@ -135,6 +134,9 @@
    "project": "Software development project",
    "collab": "Technical collaboration",
    "other": "Other"
-  }
+  },
+  "sending": "Sending…",
+  "success": "Message sent. Thank you, I will reply soon.",
+  "error": "Could not send the message right now. Please email me directly:"
  }
 }

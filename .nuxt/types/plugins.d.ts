@@ -26,7 +26,6 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/preload.js")> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/dev.js")> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/i18n.js")> &
-  InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/plugins/prerender.server.js")> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugins/ssg-detect.js")>
 
 declare module '#app' {

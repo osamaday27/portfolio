@@ -1,20 +1,24 @@
 import tailwindcss from '@tailwindcss/vite'
-import { projects } from './app/data/projects'
-const pages = ['/', '/about', '/projects', '/skills', '/contact', ...projects.map(p => `/projects/${p.slug}`)]
-const prerender = [...pages, ...pages.map(r => `/ar${r === '/' ? '' : r}`), '/api/cv-status', '/api/github/repos', '/sitemap.xml']
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@vueuse/nuxt'],
   css: ['~/assets/css/main.css'],
   vite: { plugins: [tailwindcss()] },
-  nitro: { prerender: { routes: prerender, crawlLinks: true } },
-  runtimeConfig: { githubToken: '', public: { siteUrl: 'https://example.vercel.app', githubUser: 'osamaday27' } },
+  // vue-router 5 reads Vue compile-time flags; inline it so the production server bundle defines them.
+  build: { transpile: ['vue-router'] },
+  // Content comes from the Laravel API, so pages are server-rendered and cached (ISR on Vercel).
+  // A dashboard edit appears on the public site within `swr` seconds, with no rebuild.
+  routeRules: { '/**': { swr: 60 }, '/admin/**': { ssr: false, swr: false } },
+  runtimeConfig: {
+    githubToken: '',
+    public: { siteUrl: 'https://example.vercel.app', githubUser: 'osamaday27', apiBase: 'http://localhost:8000/api/v1' }
+  },
   i18n: {
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
     langDir: 'locales',
     baseUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.vercel.app',
-    detectBrowserLanguage: { useCookie: true, cookieKey: 'lang', redirectOn: 'root' },
+    detectBrowserLanguage: false, // a redirect that depends on cookies/headers would be wrongly cached by ISR
     locales: [
       { code: 'en', language: 'en-US', dir: 'ltr', file: 'en.json', name: 'English' },
       { code: 'ar', language: 'ar-EG', dir: 'rtl', file: 'ar.json', name: 'العربية' }

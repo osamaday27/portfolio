@@ -6,18 +6,18 @@ const project = computed(() => items.value.find(p => p.slug === route.params.slu
 if (!project.value) throw createError({ statusCode: 404, statusMessage: 'Project not found', fatal: true })
 const sections = ['overview','problem','objectives','role','architecture','database','features','challenges','solutions'] as const
 const related = computed(() => items.value.filter(p => p.slug !== project.value!.slug && p.categories.some(c => project.value!.categories.includes(c))).slice(0, 3))
-useSeoMeta({ title: () => `${project.value!.repo} — ${t('brand')}`, description: () => project.value!.description })
+useSeoMeta({ title: () => `${project.value?.title} — ${t('brand')}`, description: () => project.value?.description, ogImage: () => project.value?.cover ?? undefined })
 </script>
 <template>
   <article v-if="project" class="container-x py-16">
     <NuxtLink :to="localePath('/projects')" class="label-mono hover:text-fg">{{ t('nav.projects') }}</NuxtLink>
-    <h1 class="mt-3 font-display text-4xl lg:text-5xl font-bold">{{ project.repo }}</h1>
+    <h1 class="mt-3 font-display text-4xl lg:text-5xl font-bold">{{ project.title }}</h1>
     <p class="mt-4 max-w-[60ch] text-fg2">{{ project.description || t('projects.noDesc') }}</p>
     <div class="mt-6 flex flex-wrap gap-3">
       <a :href="project.url" target="_blank" rel="noopener" class="btn btn-primary"><Github :size="16" />GitHub</a>
-      <a v-if="project.demo || project.gh?.homepage" :href="project.demo || project.gh?.homepage!" target="_blank" rel="noopener" class="btn"><ExternalLink :size="16" />{{ t('projects.demo') }}</a>
+      <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener" class="btn"><ExternalLink :size="16" />{{ t('projects.demo') }}</a>
     </div>
-    <div class="mt-10"><ProjectsProjectImage :slug="project.slug" file="cover.webp" :alt="`${project.repo} cover`" ratio="21/9" /></div>
+    <div class="mt-10"><ProjectsProjectImage :src="project.cover" :alt="`${project.title} cover`" ratio="21/9" /></div>
     <div class="mt-12 grid lg:grid-cols-[1fr_2fr] gap-10">
       <aside class="space-y-4 label-mono">
         <p>{{ project.categories.map(c => t('cat.' + c)).join(' / ') }}</p>
@@ -31,7 +31,7 @@ useSeoMeta({ title: () => `${project.value!.repo} — ${t('brand')}`, descriptio
         <p v-if="!project.caseStudy" class="border border-line p-5 text-fg2">{{ t('projects.preparing') }}</p>
       </div>
     </div>
-    <section v-if="project.images.length" class="mt-14"><h2 class="font-display text-xl font-bold mb-4">{{ t('case.screens') }}</h2><ProjectsProjectGallery :slug="project.slug" :files="project.images" /></section>
+    <section v-if="project.images.length" class="mt-14"><h2 class="font-display text-xl font-bold mb-4">{{ t('case.screens') }}</h2><ProjectsProjectGallery :images="project.images" /></section>
     <section v-if="related.length" class="mt-14"><h2 class="font-display text-xl font-bold mb-4">{{ t('case.related') }}</h2>
       <div class="grid md:grid-cols-3 gap-6"><ProjectsProjectCard v-for="r in related" :key="r.slug" :project="r" /></div></section>
   </article>

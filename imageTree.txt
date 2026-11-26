@@ -1,0 +1,44 @@
+public/
+├── files/
+│   └── Ahmed-Amasha-CV.pdf
+└── images/
+    ├── profile/
+    │   └── ahmed-profile.webp          (صورتك، نسبة 4:5، مثلاً 800×1000)
+    └── projects/
+        ├── my-clinic/
+        │   ├── cover.webp
+        │   ├── dashboard.webp
+        │   ├── frontend.webp
+        │   ├── mobile.webp
+        │   ├── gallery-01.webp
+        │   └── gallery-02.webp
+        ├── mousatech-academy/
+        │   ├── cover.webp
+        │   ├── dashboard.webp
+        │   └── frontend.webp
+        ├── dermovive-demo/
+        │   ├── cover.webp
+        │   ├── homepage.webp
+        │   └── product-page.webp
+        ├── hospital-sys/
+        │   ├── cover.webp
+        │   ├── dashboard.webp
+        │   └── frontend.webp
+        ├── pospro/
+        │   ├── cover.webp
+        │   ├── dashboard.webp
+        │   └── reports.webp
+        ├── neogym/
+        │   ├── cover.webp
+        │   ├── dashboard.webp
+        │   └── frontend.webp
+        ├── sncfiro/               └─ cover.webp
+        ├── coretech/              └─ cover.webp
+        ├── mousatech-agency/      └─ cover.webp
+        ├── digpro/                └─ cover.webp
+        ├── ahmed-amasha/          └─ cover.webp
+        ├── my-portfolio/          └─ cover.webp
+        ├── theqa/                 └─ cover.webp
+        ├── shendygrouppcrm/       └─ cover.webp
+        ├── neopos/                └─ cover.webp
+        └── linkapp/               └─ cover.webp

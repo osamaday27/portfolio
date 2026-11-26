@@ -165,6 +165,7 @@ declare global {
   const useActiveElement: typeof import('../../node_modules/@vueuse/core').useActiveElement
   const useAnimate: typeof import('../../node_modules/@vueuse/core').useAnimate
   const useAnnouncer: typeof import('../../node_modules/nuxt/dist/app/composables/announcer').useAnnouncer
+  const useApiGet: typeof import('../../app/composables/useApi').useApiGet
   const useAppConfig: typeof import('../../node_modules/nuxt/dist/app/config').useAppConfig
   const useArrayDifference: typeof import('../../node_modules/@vueuse/core').useArrayDifference
   const useArrayEvery: typeof import('../../node_modules/@vueuse/core').useArrayEvery
@@ -226,6 +227,7 @@ declare global {
   const useEventBus: typeof import('../../node_modules/@vueuse/core').useEventBus
   const useEventListener: typeof import('../../node_modules/@vueuse/core').useEventListener
   const useEventSource: typeof import('../../node_modules/@vueuse/core').useEventSource
+  const useExperience: typeof import('../../app/composables/useProfileData').useExperience
   const useEyeDropper: typeof import('../../node_modules/@vueuse/core').useEyeDropper
   const useFavicon: typeof import('../../node_modules/@vueuse/core').useFavicon
   const useFetch: typeof import('../../node_modules/nuxt/dist/app/composables/fetch').useFetch
@@ -255,6 +257,7 @@ declare global {
   const useLazyFetch: typeof import('../../node_modules/nuxt/dist/app/composables/fetch').useLazyFetch
   const useLink: typeof import('vue-router').useLink
   const useLoadingIndicator: typeof import('../../node_modules/nuxt/dist/app/composables/loading-indicator').useLoadingIndicator
+  const useLoc: typeof import('../../app/composables/useLoc').useLoc
   const useLocalStorage: typeof import('../../node_modules/@vueuse/core').useLocalStorage
   const useLocaleHead: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index').useLocaleHead
   const useLocalePath: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index').useLocalePath
@@ -370,6 +373,8 @@ declare global {
   const useSetI18nParams: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index').useSetI18nParams
   const useShadowRoot: typeof import('vue').useShadowRoot
   const useShare: typeof import('../../node_modules/@vueuse/core').useShare
+  const useSite: typeof import('../../app/composables/useApi').useSite
+  const useSkills: typeof import('../../app/composables/useProfileData').useSkills
   const useSlots: typeof import('vue').useSlots
   const useSorted: typeof import('../../node_modules/@vueuse/core').useSorted
   const useSpeechRecognition: typeof import('../../node_modules/@vueuse/core').useSpeechRecognition
@@ -450,7 +455,7 @@ declare global {
   export type { PageMeta } from '../../node_modules/nuxt/dist/app/composables/pages'
   import('../../node_modules/nuxt/dist/app/composables/pages')
   // @ts-ignore
-  export type { Category, Project, GitHubRepo, Skill, SkillGroup } from '../../app/types/index'
+  export type { Bi, GitHubRepo, ApiImage, ApiProject, ProjectView } from '../../app/types/index'
   import('../../app/types/index')
 }
 // for vue template auto import
@@ -621,6 +626,7 @@ declare module 'vue' {
     readonly useActiveElement: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useActiveElement']>
     readonly useAnimate: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useAnimate']>
     readonly useAnnouncer: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/announcer')['useAnnouncer']>
+    readonly useApiGet: UnwrapRef<typeof import('../../app/composables/useApi')['useApiGet']>
     readonly useAppConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/config')['useAppConfig']>
     readonly useArrayDifference: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useArrayDifference']>
     readonly useArrayEvery: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useArrayEvery']>
@@ -682,6 +688,7 @@ declare module 'vue' {
     readonly useEventBus: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useEventBus']>
     readonly useEventListener: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useEventListener']>
     readonly useEventSource: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useEventSource']>
+    readonly useExperience: UnwrapRef<typeof import('../../app/composables/useProfileData')['useExperience']>
     readonly useEyeDropper: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useEyeDropper']>
     readonly useFavicon: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useFavicon']>
     readonly useFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useFetch']>
@@ -711,6 +718,7 @@ declare module 'vue' {
     readonly useLazyFetch: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/fetch')['useLazyFetch']>
     readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
     readonly useLoadingIndicator: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/loading-indicator')['useLoadingIndicator']>
+    readonly useLoc: UnwrapRef<typeof import('../../app/composables/useLoc')['useLoc']>
     readonly useLocalStorage: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useLocalStorage']>
     readonly useLocaleHead: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index')['useLocaleHead']>
     readonly useLocalePath: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index')['useLocalePath']>
@@ -826,6 +834,8 @@ declare module 'vue' {
     readonly useSetI18nParams: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index')['useSetI18nParams']>
     readonly useShadowRoot: UnwrapRef<typeof import('vue')['useShadowRoot']>
     readonly useShare: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useShare']>
+    readonly useSite: UnwrapRef<typeof import('../../app/composables/useApi')['useSite']>
+    readonly useSkills: UnwrapRef<typeof import('../../app/composables/useProfileData')['useSkills']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useSorted: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSorted']>
     readonly useSpeechRecognition: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useSpeechRecognition']>

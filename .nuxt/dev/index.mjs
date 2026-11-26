@@ -38,7 +38,6 @@ import { captureRawStackTrace, parseRawStackTrace } from 'file://D:/work/portfol
 import _5142yCVpWwn5PvE6XHDDXBP_DBYEq2vNEckbujKQINE from 'file://D:/work/portfolio/node_modules/@nuxt/cli/runtime/dev-close-sockets.mjs';
 import dc from 'node:diagnostics_channel';
 import { formatWithOptions } from 'node:util';
-import { createRouterMatcher } from 'file://D:/work/portfolio/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import _Z4Vm0BJMJeyU_KFYzGBgSOBoZ4JOQn4jYmko_KtDwU from 'file:///D:/work/portfolio/node_modules/@nuxt/vite-builder/dist/ssr-sourcemap.mjs';
 import _LB91z6Ht2T49ncvhFWMKIA26eT4mdBc7tIFl06yLKKs from 'file:///D:/work/portfolio/node_modules/@nuxt/vite-builder/dist/vite-node-warmup.mjs';
 import { fileURLToPath } from 'node:url';
@@ -753,140 +752,17 @@ const _inlineRuntimeConfig = {
       "/__nuxt_error": {
         "cache": false
       },
-      "/": {
-        "prerender": true
+      "/**": {
+        "swr": 60,
+        "cache": {
+          "swr": true,
+          "maxAge": 60
+        }
       },
-      "/about": {
-        "prerender": true
-      },
-      "/projects": {
-        "prerender": true
-      },
-      "/skills": {
-        "prerender": true
-      },
-      "/contact": {
-        "prerender": true
-      },
-      "/projects/my-clinic": {
-        "prerender": true
-      },
-      "/projects/mousatech-academy": {
-        "prerender": true
-      },
-      "/projects/dermovive-demo": {
-        "prerender": true
-      },
-      "/projects/hospital-sys": {
-        "prerender": true
-      },
-      "/projects/sncfiro": {
-        "prerender": true
-      },
-      "/projects/pospro": {
-        "prerender": true
-      },
-      "/projects/coretech": {
-        "prerender": true
-      },
-      "/projects/mousatech-agency": {
-        "prerender": true
-      },
-      "/projects/digpro": {
-        "prerender": true
-      },
-      "/projects/ahmed-amasha": {
-        "prerender": true
-      },
-      "/projects/my-portfolio": {
-        "prerender": true
-      },
-      "/projects/theqa": {
-        "prerender": true
-      },
-      "/projects/neogym": {
-        "prerender": true
-      },
-      "/projects/shendygrouppcrm": {
-        "prerender": true
-      },
-      "/projects/neopos": {
-        "prerender": true
-      },
-      "/projects/linkapp": {
-        "prerender": true
-      },
-      "/ar": {
-        "prerender": true
-      },
-      "/ar/about": {
-        "prerender": true
-      },
-      "/ar/projects": {
-        "prerender": true
-      },
-      "/ar/skills": {
-        "prerender": true
-      },
-      "/ar/contact": {
-        "prerender": true
-      },
-      "/ar/projects/my-clinic": {
-        "prerender": true
-      },
-      "/ar/projects/mousatech-academy": {
-        "prerender": true
-      },
-      "/ar/projects/dermovive-demo": {
-        "prerender": true
-      },
-      "/ar/projects/hospital-sys": {
-        "prerender": true
-      },
-      "/ar/projects/sncfiro": {
-        "prerender": true
-      },
-      "/ar/projects/pospro": {
-        "prerender": true
-      },
-      "/ar/projects/coretech": {
-        "prerender": true
-      },
-      "/ar/projects/mousatech-agency": {
-        "prerender": true
-      },
-      "/ar/projects/digpro": {
-        "prerender": true
-      },
-      "/ar/projects/ahmed-amasha": {
-        "prerender": true
-      },
-      "/ar/projects/my-portfolio": {
-        "prerender": true
-      },
-      "/ar/projects/theqa": {
-        "prerender": true
-      },
-      "/ar/projects/neogym": {
-        "prerender": true
-      },
-      "/ar/projects/shendygrouppcrm": {
-        "prerender": true
-      },
-      "/ar/projects/neopos": {
-        "prerender": true
-      },
-      "/ar/projects/linkapp": {
-        "prerender": true
-      },
-      "/api/cv-status": {
-        "prerender": true
-      },
-      "/api/github/repos": {
-        "prerender": true
-      },
-      "/sitemap.xml": {
-        "prerender": true
+      "/admin/**": {
+        "ssr": false,
+        "swr": false,
+        "cache": false
       },
       "/_nuxt/builds/meta/**": {
         "headers": {
@@ -897,186 +773,6 @@ const _inlineRuntimeConfig = {
         "headers": {
           "cache-control": "public, max-age=1, immutable"
         }
-      },
-      "/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/about/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/skills/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/contact/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/my-clinic/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/mousatech-academy/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/dermovive-demo/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/hospital-sys/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/sncfiro/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/pospro/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/coretech/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/mousatech-agency/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/digpro/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/ahmed-amasha/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/my-portfolio/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/theqa/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/neogym/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/shendygrouppcrm/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/neopos/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/projects/linkapp/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/about/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/skills/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/contact/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/my-clinic/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/mousatech-academy/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/dermovive-demo/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/hospital-sys/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/sncfiro/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/pospro/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/coretech/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/mousatech-agency/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/digpro/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/ahmed-amasha/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/my-portfolio/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/theqa/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/neogym/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/shendygrouppcrm/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/neopos/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/ar/projects/linkapp/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/api/cv-status/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/api/github/repos/_payload.json": {
-        "ssr": true,
-        "prerender": true
-      },
-      "/sitemap.xml/_payload.json": {
-        "ssr": true,
-        "prerender": true
       }
     }
   },
@@ -1084,6 +780,7 @@ const _inlineRuntimeConfig = {
   "public": {
     "siteUrl": "https://example.vercel.app",
     "githubUser": "osamaday27",
+    "apiBase": "http://localhost:8000/api/v1",
     "i18n": {
       "baseUrl": "https://example.vercel.app",
       "defaultLocale": "en",
@@ -1108,16 +805,7 @@ const _inlineRuntimeConfig = {
           "defaultForDomains": []
         }
       ],
-      "detectBrowserLanguage": {
-        "alwaysRedirect": false,
-        "cookieCrossOrigin": false,
-        "cookieDomain": "",
-        "cookieKey": "lang",
-        "cookieSecure": false,
-        "fallbackLocale": "",
-        "redirectOn": "root",
-        "useCookie": true
-      },
+      "detectBrowserLanguage": false,
       "experimental": {
         "localeDetector": "",
         "typedPages": true,
@@ -1844,6 +1532,7 @@ const appComponentHead = [];
 const NUXT_PRERENDER_NO_SSR_ROUTES = ["/index.html","/200.html","/404.html"];
 const NUXT_NO_SCRIPTS_PATTERNS = [];
 const NUXT_PAGE_PATTERNS = ["/projects/:slug","/ar/projects/:slug","/about","/ar/about","/contact","/ar/contact","/projects","/ar/projects","/skills","/ar/skills","/","/ar"];
+const NUXT_PAYLOAD_INLINE = false;
 const NUXT_SSR_STREAMING = false;
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;600&family=Cairo:wght@700&family=JetBrains+Mono:wght@400&display=swap"}],"style":[],"script":[{"type":"module","src":"/__devtools/embedded.js","tagPosition":"bodyClose"}],"noscript":[]};
 const appRootTag = "div";
@@ -2796,7 +2485,7 @@ const create = (obj = null) => _create(obj);
  * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/index.ts
  * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/codeframe.ts
  */
-const isArray = Array.isArray;
+const isArray$1 = Array.isArray;
 const isFunction = (val) => typeof val === 'function';
 const isString = (val) => typeof val === 'string';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -2804,7 +2493,7 @@ const isObject = (val) => val !== null && typeof val === 'object';
 const objectToString = Object.prototype.toString;
 const toTypeString = (value) => objectToString.call(value);
 
-const isNotObjectOrIsArray = (val) => !isObject(val) || isArray(val);
+const isNotObjectOrIsArray = (val) => !isObject(val) || isArray$1(val);
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function deepCopy(src, des) {
     // src and des should both be objects, and none of them can be a array.
@@ -2824,7 +2513,7 @@ function deepCopy(src, des) {
                 return;
             }
             const value = src[key];
-            if (isArray(value)) {
+            if (isArray$1(value)) {
                 // replace arrays instead of merging them, without retaining source references
                 const copied = [];
                 copied.length = value.length;
@@ -2832,7 +2521,7 @@ function deepCopy(src, des) {
                 stack.push({ src: value, des: copied });
             }
             else if (isObject(value)) {
-                if (!isObject(des[key]) || isArray(des[key])) {
+                if (!isObject(des[key]) || isArray$1(des[key])) {
                     des[key] = create();
                 }
                 stack.push({ src: value, des: des[key] });
@@ -2920,9 +2609,9 @@ async function getLocaleMessagesMerged(locale, loaders = []) {
   return merged;
 }
 
-const locale_en_46json_8112df66 = /* @__PURE__ */ JSON.parse("{\"nav\":{\"home\":\"Home\",\"about\":\"About\",\"projects\":\"Projects\",\"skills\":\"Skills\",\"contact\":\"Contact\"},\"brand\":\"Ahmed Amasha\",\"cv\":\"Download CV\",\"cvMissing\":\"CV not available yet\",\"contactCta\":\"Contact me\",\"explore\":\"Explore projects\",\"theme\":\"Toggle theme\",\"lang\":\"العربية\",\"menu\":\"Menu\",\"hero\":{\"hello\":\"Hello, I'm\",\"name\":\"Ahmed Amasha\",\"title\":\"Full-Stack Software Engineer\",\"desc\":\"I build scalable web applications, business management systems, and reliable digital solutions. My background combines software engineering with IT infrastructure, networking, security fundamentals, and cloud technologies.\",\"available\":\"Available for opportunities\",\"stack\":\"Main stack\"},\"footer\":{\"rights\":\"All rights reserved.\"},\"projects\":{\"pending\":\"Screenshot pending\",\"noDesc\":\"Description will be added.\",\"caseStudy\":\"Case study\",\"open\":\"Open image\",\"close\":\"Close\",\"intro\":\"Selected repositories. Content is curated locally and enriched with live GitHub data.\",\"live\":\"GitHub data: live\",\"local\":\"GitHub data: unavailable, showing local data\",\"filter\":\"Filter projects\",\"empty\":\"No projects in this category yet.\",\"demo\":\"Live demo\",\"preparing\":\"This case study is being prepared.\"},\"cat\":{\"all\":\"All projects\",\"web\":\"Web applications\",\"backend\":\"Backend systems\",\"ecommerce\":\"E-commerce\",\"healthcare\":\"Healthcare systems\",\"management\":\"Management systems\",\"education\":\"Education platforms\",\"business\":\"Business websites\",\"api\":\"APIs\",\"ui\":\"UI/UX\"},\"case\":{\"overview\":\"Project overview\",\"problem\":\"Business problem\",\"objectives\":\"Objectives\",\"role\":\"My role\",\"architecture\":\"Technical architecture\",\"database\":\"Database structure\",\"features\":\"Main features\",\"challenges\":\"Development challenges\",\"solutions\":\"Solutions\",\"screens\":\"Application screenshots\",\"related\":\"Related projects\"},\"skills\":{\"title\":\"Skills & expertise\",\"intro\":\"Grouped by discipline. Proficiency levels appear only once verified.\",\"dev\":\"Software development\",\"design\":\"Software engineering & system design\",\"network\":\"Networking & infrastructure\",\"security\":\"Cybersecurity & application security\",\"cloud\":\"Cloud computing & deployment\",\"database\":\"Database engineering\",\"pm\":\"Project management\",\"tools\":\"Development tools\"},\"level\":{\"core\":\"Core experience\",\"working\":\"Working knowledge\",\"fundamentals\":\"Fundamentals\"},\"about\":{\"title\":\"About Ahmed Amasha\",\"intro\":\"I am a software engineer who works from business requirements to deployed applications, with a practical background in IT support, networking and security fundamentals.\",\"approach\":\"How I work\",\"experience\":\"Professional experience\",\"step\":{\"req\":\"Understand business requirements\",\"flow\":\"Analyze system workflows\",\"db\":\"Design database structures\",\"tech\":\"Select suitable technologies\",\"logic\":\"Implement application logic\",\"api\":\"Build secure APIs\",\"test\":\"Test and deploy\",\"maintain\":\"Maintain and improve\"}},\"exp\":{\"it\":{\"title\":\"IT & Network Support Technician\",\"desc\":\"Editable: add responsibilities here.\"},\"pc\":{\"title\":\"Project Coordinator\",\"desc\":\"Editable: add responsibilities here.\"},\"be\":{\"title\":\"Backend Developer (Laravel)\",\"desc\":\"Editable: add responsibilities here.\"}},\"contact\":{\"title\":\"Let's build something together.\",\"send\":\"Send message\",\"note\":\"This opens your email app with the message prepared.\",\"opened\":\"Your email app should open now. If it does not, write to the address shown on this page.\",\"f\":{\"name\":\"Full name\",\"email\":\"Email\",\"subject\":\"Subject\",\"message\":\"Message\",\"type\":\"Inquiry type\"},\"v\":{\"required\":\"This field is required.\",\"email\":\"Enter a valid email address.\",\"message\":\"Write at least 10 characters.\"},\"type\":{\"fullstack\":\"Full-stack developer opportunity\",\"backend\":\"Backend developer opportunity\",\"it\":\"IT support opportunity\",\"project\":\"Software development project\",\"collab\":\"Technical collaboration\",\"other\":\"Other\"}}}");
+const locale_en_46json_8112df66 = /* @__PURE__ */ JSON.parse("{\"nav\":{\"home\":\"Home\",\"about\":\"About\",\"projects\":\"Projects\",\"skills\":\"Skills\",\"contact\":\"Contact\"},\"brand\":\"Ahmed Amasha\",\"cv\":\"Download CV\",\"cvMissing\":\"CV not available yet\",\"contactCta\":\"Contact me\",\"explore\":\"Explore projects\",\"theme\":\"Toggle theme\",\"lang\":\"العربية\",\"menu\":\"Menu\",\"hero\":{\"hello\":\"Hello, I'm\",\"name\":\"Ahmed Amasha\",\"title\":\"Full-Stack Software Engineer\",\"desc\":\"I build scalable web applications, business management systems, and reliable digital solutions. My background combines software engineering with IT infrastructure, networking, security fundamentals, and cloud technologies.\",\"available\":\"Available for opportunities\",\"stack\":\"Main stack\"},\"footer\":{\"rights\":\"All rights reserved.\"},\"projects\":{\"pending\":\"Screenshot pending\",\"noDesc\":\"Description will be added.\",\"caseStudy\":\"Case study\",\"open\":\"Open image\",\"close\":\"Close\",\"intro\":\"Selected repositories. Content is curated locally and enriched with live GitHub data.\",\"live\":\"GitHub data: live\",\"local\":\"GitHub data: unavailable, showing local data\",\"filter\":\"Filter projects\",\"empty\":\"No projects in this category yet.\",\"demo\":\"Live demo\",\"preparing\":\"This case study is being prepared.\"},\"cat\":{\"all\":\"All projects\",\"web\":\"Web applications\",\"backend\":\"Backend systems\",\"ecommerce\":\"E-commerce\",\"healthcare\":\"Healthcare systems\",\"management\":\"Management systems\",\"education\":\"Education platforms\",\"business\":\"Business websites\",\"api\":\"APIs\",\"ui\":\"UI/UX\"},\"case\":{\"overview\":\"Project overview\",\"problem\":\"Business problem\",\"objectives\":\"Objectives\",\"role\":\"My role\",\"architecture\":\"Technical architecture\",\"database\":\"Database structure\",\"features\":\"Main features\",\"challenges\":\"Development challenges\",\"solutions\":\"Solutions\",\"screens\":\"Application screenshots\",\"related\":\"Related projects\"},\"skills\":{\"title\":\"Skills & expertise\",\"intro\":\"Grouped by discipline. Proficiency levels appear only once verified.\",\"dev\":\"Software development\",\"design\":\"Software engineering & system design\",\"network\":\"Networking & infrastructure\",\"security\":\"Cybersecurity & application security\",\"cloud\":\"Cloud computing & deployment\",\"database\":\"Database engineering\",\"pm\":\"Project management\",\"tools\":\"Development tools\"},\"level\":{\"core\":\"Core experience\",\"working\":\"Working knowledge\",\"fundamentals\":\"Fundamentals\"},\"about\":{\"title\":\"About Ahmed Amasha\",\"intro\":\"I am a software engineer who works from business requirements to deployed applications, with a practical background in IT support, networking and security fundamentals.\",\"approach\":\"How I work\",\"experience\":\"Professional experience\",\"step\":{\"req\":\"Understand business requirements\",\"flow\":\"Analyze system workflows\",\"db\":\"Design database structures\",\"tech\":\"Select suitable technologies\",\"logic\":\"Implement application logic\",\"api\":\"Build secure APIs\",\"test\":\"Test and deploy\",\"maintain\":\"Maintain and improve\"},\"present\":\"Present\"},\"exp\":{\"it\":{\"title\":\"IT & Network Support Technician\",\"desc\":\"Editable: add responsibilities here.\"},\"pc\":{\"title\":\"Project Coordinator\",\"desc\":\"Editable: add responsibilities here.\"},\"be\":{\"title\":\"Backend Developer (Laravel)\",\"desc\":\"Editable: add responsibilities here.\"}},\"contact\":{\"title\":\"Let's build something together.\",\"send\":\"Send message\",\"f\":{\"name\":\"Full name\",\"email\":\"Email\",\"subject\":\"Subject\",\"message\":\"Message\",\"type\":\"Inquiry type\"},\"v\":{\"required\":\"This field is required.\",\"email\":\"Enter a valid email address.\",\"message\":\"Write at least 10 characters.\"},\"type\":{\"fullstack\":\"Full-stack developer opportunity\",\"backend\":\"Backend developer opportunity\",\"it\":\"IT support opportunity\",\"project\":\"Software development project\",\"collab\":\"Technical collaboration\",\"other\":\"Other\"},\"sending\":\"Sending…\",\"success\":\"Message sent. Thank you, I will reply soon.\",\"error\":\"Could not send the message right now. Please email me directly:\"}}");
 
-const locale_ar_46json_ab145ceb = /* @__PURE__ */ JSON.parse("{\"nav\":{\"home\":\"الرئيسية\",\"about\":\"نبذة\",\"projects\":\"المشاريع\",\"skills\":\"المهارات\",\"contact\":\"تواصل\"},\"brand\":\"أحمد عماشة\",\"cv\":\"تحميل السيرة الذاتية\",\"cvMissing\":\"السيرة الذاتية غير متاحة حالياً\",\"contactCta\":\"تواصل معي\",\"explore\":\"استعرض المشاريع\",\"theme\":\"تبديل المظهر\",\"lang\":\"English\",\"menu\":\"القائمة\",\"hero\":{\"hello\":\"مرحباً، أنا\",\"name\":\"أحمد عماشة\",\"title\":\"مهندس برمجيات ومطوّر تطبيقات متكامل\",\"desc\":\"أبني تطبيقات الويب والأنظمة الإدارية والحلول الرقمية، مع اهتمام بهندسة البرمجيات والبنية التحتية والشبكات وأساسيات الأمن السيبراني والحوسبة السحابية.\",\"available\":\"متاح لفرص العمل\",\"stack\":\"التقنيات الأساسية\"},\"footer\":{\"rights\":\"جميع الحقوق محفوظة.\"},\"projects\":{\"pending\":\"لقطة الشاشة قيد الإضافة\",\"noDesc\":\"سيتم إضافة الوصف.\",\"caseStudy\":\"دراسة الحالة\",\"open\":\"فتح الصورة\",\"close\":\"إغلاق\",\"intro\":\"مستودعات مختارة. المحتوى منسّق محلياً ومدعوم ببيانات GitHub المباشرة.\",\"live\":\"بيانات GitHub: مباشرة\",\"local\":\"بيانات GitHub غير متاحة، يتم عرض البيانات المحلية\",\"filter\":\"تصفية المشاريع\",\"empty\":\"لا توجد مشاريع في هذه الفئة بعد.\",\"demo\":\"عرض مباشر\",\"preparing\":\"دراسة الحالة قيد الإعداد.\"},\"cat\":{\"all\":\"كل المشاريع\",\"web\":\"تطبيقات الويب\",\"backend\":\"أنظمة الخلفية\",\"ecommerce\":\"التجارة الإلكترونية\",\"healthcare\":\"الأنظمة الصحية\",\"management\":\"أنظمة الإدارة\",\"education\":\"منصات التعليم\",\"business\":\"مواقع الأعمال\",\"api\":\"واجهات برمجية\",\"ui\":\"تصميم الواجهات\"},\"case\":{\"overview\":\"نظرة عامة\",\"problem\":\"مشكلة العمل\",\"objectives\":\"الأهداف\",\"role\":\"دوري\",\"architecture\":\"البنية التقنية\",\"database\":\"هيكل قاعدة البيانات\",\"features\":\"الميزات الرئيسية\",\"challenges\":\"التحديات\",\"solutions\":\"الحلول\",\"screens\":\"لقطات التطبيق\",\"related\":\"مشاريع ذات صلة\"},\"skills\":{\"title\":\"المهارات والخبرات\",\"intro\":\"مقسّمة حسب التخصص. تظهر مستويات الإتقان فقط بعد التحقق منها.\",\"dev\":\"تطوير البرمجيات\",\"design\":\"هندسة البرمجيات وتصميم الأنظمة\",\"network\":\"الشبكات والبنية التحتية\",\"security\":\"الأمن السيبراني وأمن التطبيقات\",\"cloud\":\"الحوسبة السحابية والنشر\",\"database\":\"هندسة قواعد البيانات\",\"pm\":\"إدارة المشاريع\",\"tools\":\"أدوات التطوير\"},\"level\":{\"core\":\"خبرة أساسية\",\"working\":\"معرفة عملية\",\"fundamentals\":\"أساسيات\"},\"about\":{\"title\":\"نبذة عن أحمد عماشة\",\"intro\":\"مهندس برمجيات أعمل من فهم متطلبات العمل حتى نشر التطبيق، بخلفية عملية في الدعم التقني والشبكات وأساسيات الأمن.\",\"approach\":\"طريقة عملي\",\"experience\":\"الخبرة المهنية\",\"step\":{\"req\":\"فهم متطلبات العمل\",\"flow\":\"تحليل مسارات النظام\",\"db\":\"تصميم قواعد البيانات\",\"tech\":\"اختيار التقنيات المناسبة\",\"logic\":\"تنفيذ منطق التطبيق\",\"api\":\"بناء واجهات برمجية آمنة\",\"test\":\"الاختبار والنشر\",\"maintain\":\"الصيانة والتحسين\"}},\"exp\":{\"it\":{\"title\":\"فني دعم تقني وشبكات\",\"desc\":\"قابل للتعديل: أضف المسؤوليات هنا.\"},\"pc\":{\"title\":\"منسق مشاريع\",\"desc\":\"قابل للتعديل: أضف المسؤوليات هنا.\"},\"be\":{\"title\":\"مطوّر Backend (Laravel)\",\"desc\":\"قابل للتعديل: أضف المسؤوليات هنا.\"}},\"contact\":{\"title\":\"لنبنِ شيئاً مميزاً معاً.\",\"send\":\"إرسال الرسالة\",\"note\":\"سيفتح هذا تطبيق البريد لديك والرسالة جاهزة.\",\"opened\":\"يجب أن يفتح تطبيق البريد الآن. وإن لم يفتح فراسلني على العنوان الظاهر في الصفحة.\",\"f\":{\"name\":\"الاسم الكامل\",\"email\":\"البريد الإلكتروني\",\"subject\":\"الموضوع\",\"message\":\"الرسالة\",\"type\":\"نوع الطلب\"},\"v\":{\"required\":\"هذا الحقل مطلوب.\",\"email\":\"أدخل بريداً إلكترونياً صحيحاً.\",\"message\":\"اكتب 10 أحرف على الأقل.\"},\"type\":{\"fullstack\":\"فرصة مطوّر Full-Stack\",\"backend\":\"فرصة مطوّر Backend\",\"it\":\"فرصة دعم تقني\",\"project\":\"مشروع تطوير برمجيات\",\"collab\":\"تعاون تقني\",\"other\":\"أخرى\"}}}");
+const locale_ar_46json_ab145ceb = /* @__PURE__ */ JSON.parse("{\"nav\":{\"home\":\"الرئيسية\",\"about\":\"نبذة\",\"projects\":\"المشاريع\",\"skills\":\"المهارات\",\"contact\":\"تواصل\"},\"brand\":\"أحمد عماشة\",\"cv\":\"تحميل السيرة الذاتية\",\"cvMissing\":\"السيرة الذاتية غير متاحة حالياً\",\"contactCta\":\"تواصل معي\",\"explore\":\"استعرض المشاريع\",\"theme\":\"تبديل المظهر\",\"lang\":\"English\",\"menu\":\"القائمة\",\"hero\":{\"hello\":\"مرحباً، أنا\",\"name\":\"أحمد عماشة\",\"title\":\"مهندس برمجيات ومطوّر تطبيقات متكامل\",\"desc\":\"أبني تطبيقات الويب والأنظمة الإدارية والحلول الرقمية، مع اهتمام بهندسة البرمجيات والبنية التحتية والشبكات وأساسيات الأمن السيبراني والحوسبة السحابية.\",\"available\":\"متاح لفرص العمل\",\"stack\":\"التقنيات الأساسية\"},\"footer\":{\"rights\":\"جميع الحقوق محفوظة.\"},\"projects\":{\"pending\":\"لقطة الشاشة قيد الإضافة\",\"noDesc\":\"سيتم إضافة الوصف.\",\"caseStudy\":\"دراسة الحالة\",\"open\":\"فتح الصورة\",\"close\":\"إغلاق\",\"intro\":\"مستودعات مختارة. المحتوى منسّق محلياً ومدعوم ببيانات GitHub المباشرة.\",\"live\":\"بيانات GitHub: مباشرة\",\"local\":\"بيانات GitHub غير متاحة، يتم عرض البيانات المحلية\",\"filter\":\"تصفية المشاريع\",\"empty\":\"لا توجد مشاريع في هذه الفئة بعد.\",\"demo\":\"عرض مباشر\",\"preparing\":\"دراسة الحالة قيد الإعداد.\"},\"cat\":{\"all\":\"كل المشاريع\",\"web\":\"تطبيقات الويب\",\"backend\":\"أنظمة الخلفية\",\"ecommerce\":\"التجارة الإلكترونية\",\"healthcare\":\"الأنظمة الصحية\",\"management\":\"أنظمة الإدارة\",\"education\":\"منصات التعليم\",\"business\":\"مواقع الأعمال\",\"api\":\"واجهات برمجية\",\"ui\":\"تصميم الواجهات\"},\"case\":{\"overview\":\"نظرة عامة\",\"problem\":\"مشكلة العمل\",\"objectives\":\"الأهداف\",\"role\":\"دوري\",\"architecture\":\"البنية التقنية\",\"database\":\"هيكل قاعدة البيانات\",\"features\":\"الميزات الرئيسية\",\"challenges\":\"التحديات\",\"solutions\":\"الحلول\",\"screens\":\"لقطات التطبيق\",\"related\":\"مشاريع ذات صلة\"},\"skills\":{\"title\":\"المهارات والخبرات\",\"intro\":\"مقسّمة حسب التخصص. تظهر مستويات الإتقان فقط بعد التحقق منها.\",\"dev\":\"تطوير البرمجيات\",\"design\":\"هندسة البرمجيات وتصميم الأنظمة\",\"network\":\"الشبكات والبنية التحتية\",\"security\":\"الأمن السيبراني وأمن التطبيقات\",\"cloud\":\"الحوسبة السحابية والنشر\",\"database\":\"هندسة قواعد البيانات\",\"pm\":\"إدارة المشاريع\",\"tools\":\"أدوات التطوير\"},\"level\":{\"core\":\"خبرة أساسية\",\"working\":\"معرفة عملية\",\"fundamentals\":\"أساسيات\"},\"about\":{\"title\":\"نبذة عن أحمد عماشة\",\"intro\":\"مهندس برمجيات أعمل من فهم متطلبات العمل حتى نشر التطبيق، بخلفية عملية في الدعم التقني والشبكات وأساسيات الأمن.\",\"approach\":\"طريقة عملي\",\"experience\":\"الخبرة المهنية\",\"step\":{\"req\":\"فهم متطلبات العمل\",\"flow\":\"تحليل مسارات النظام\",\"db\":\"تصميم قواعد البيانات\",\"tech\":\"اختيار التقنيات المناسبة\",\"logic\":\"تنفيذ منطق التطبيق\",\"api\":\"بناء واجهات برمجية آمنة\",\"test\":\"الاختبار والنشر\",\"maintain\":\"الصيانة والتحسين\"},\"present\":\"حتى الآن\"},\"exp\":{\"it\":{\"title\":\"فني دعم تقني وشبكات\",\"desc\":\"قابل للتعديل: أضف المسؤوليات هنا.\"},\"pc\":{\"title\":\"منسق مشاريع\",\"desc\":\"قابل للتعديل: أضف المسؤوليات هنا.\"},\"be\":{\"title\":\"مطوّر Backend (Laravel)\",\"desc\":\"قابل للتعديل: أضف المسؤوليات هنا.\"}},\"contact\":{\"title\":\"لنبنِ شيئاً مميزاً معاً.\",\"send\":\"إرسال الرسالة\",\"f\":{\"name\":\"الاسم الكامل\",\"email\":\"البريد الإلكتروني\",\"subject\":\"الموضوع\",\"message\":\"الرسالة\",\"type\":\"نوع الطلب\"},\"v\":{\"required\":\"هذا الحقل مطلوب.\",\"email\":\"أدخل بريداً إلكترونياً صحيحاً.\",\"message\":\"اكتب 10 أحرف على الأقل.\"},\"type\":{\"fullstack\":\"فرصة مطوّر Full-Stack\",\"backend\":\"فرصة مطوّر Backend\",\"it\":\"فرصة دعم تقني\",\"project\":\"مشروع تطوير برمجيات\",\"collab\":\"تعاون تقني\",\"other\":\"أخرى\"},\"sending\":\"جارٍ الإرسال…\",\"success\":\"تم إرسال الرسالة. شكراً لك، سأرد قريباً.\",\"error\":\"تعذر إرسال الرسالة الآن. راسلني مباشرة على:\"}}");
 
 // @ts-nocheck
 const localeCodes =  [
@@ -3171,7 +2860,7 @@ function getFallbackLocaleCodes(fallback, locales) {
   if (fallback === false) {
     return [];
   }
-  if (isArray(fallback)) {
+  if (isArray$1(fallback)) {
     return fallback;
   }
   let fallbackLocales = [];
@@ -3465,6 +3154,1095 @@ function createLocaleDetector(config) {
     }
     return "";
   };
+}
+
+/*!
+* vue-router v5.5.2
+* (c) 2026 Eduardo San Martin Morote
+* @license MIT
+*/
+/**
+* Checks if a path is absolute, meaning it starts with a `/`.
+*
+* @param path - path to check
+*
+* @internal
+*/
+const isAbsolutePath = (path) => path.startsWith("/");
+const assign = Object.assign;
+const noop = () => {};
+/**
+* Typesafe alternative to Array.isArray
+* https://github.com/microsoft/TypeScript/pull/48228
+*
+* @internal
+*/
+const isArray = Array.isArray;
+function mergeOptions(defaults, partialOptions) {
+	const options = {};
+	for (const key in defaults) options[key] = key in partialOptions ? partialOptions[key] : defaults[key];
+	return options;
+}
+// src/errors.ts
+const NavigationFailureSymbol = Symbol("navigation failure" );
+const ErrorTypeMessages = {
+	[1]({ location, currentLocation }) {
+		return `No match for\n ${JSON.stringify(location)}${currentLocation ? "\nwhile being at\n" + JSON.stringify(currentLocation) : ""}`;
+	},
+	[2]({ from, to }) {
+		return `Redirected from "${from.fullPath}" to "${stringifyRoute(to)}" via a navigation guard.`;
+	},
+	[4]({ from, to }) {
+		return `Navigation aborted from "${from.fullPath}" to "${to.fullPath}" via a navigation guard.`;
+	},
+	[8]({ from, to }) {
+		return `Navigation cancelled from "${from.fullPath}" to "${to.fullPath}" with a new navigation.`;
+	},
+	[16]({ from, to: _to }) {
+		return `Avoided redundant navigation to current location: "${from.fullPath}".`;
+	}
+};
+/**
+* Creates a typed NavigationFailure object.
+* @internal
+* @param type - NavigationFailureType
+* @param params - { from, to }
+*/
+function createRouterError(type, params) {
+	return assign(new Error(ErrorTypeMessages[type](params)), {
+		type,
+		[NavigationFailureSymbol]: true
+	}, params);
+}
+const propertiesToLog = [
+	"params",
+	"query",
+	"hash"
+];
+/**
+* Stringifies a raw location for display in dev warnings.
+*
+* @internal
+*/
+function stringifyRoute(to) {
+	if (!to || typeof to === "string") return to;
+	if (to.path != null) return to.path;
+	const location = {};
+	for (const key of propertiesToLog) if (key in to) location[key] = to[key];
+	return JSON.stringify(location, null, 2);
+}
+// src/diagnostics.ts
+/**
+* Runtime diagnostics catalog for Vue Router.
+*
+* Every entry has a stable `VUE_ROUTER_X####` code, a `why` that states the problem
+* (the diagnosis only, never the remedy) and a `fix` that states the remedy
+* (only, never the diagnosis). They are complementary: the reporter prints
+* both, so neither repeats the other. The diagnosis substrings asserted by the
+* warning tests stay in `why`. All call sites stay behind the existing `__DEV__` (or
+* `"development" !== 'production'`) guards and remain bare expression
+* statements so they tree-shake out of production builds.
+*
+* Codes are permanent: never rename or reuse one.
+* - `VUE_ROUTER_R0###` core runtime warnings
+* - `VUE_ROUTER_R1###` experimental data-loaders
+* - `VUE_ROUTER_D0###` deprecations
+*/
+const diagnostics = /*#__PURE__*/ defineDiagnostics({
+	reporters: [/*#__PURE__*/ createConsoleReporter()],
+	codes: {
+		VUE_ROUTER_R0122: {
+			why: (p) => `The optional path param "${p.param}" is being removed with "${p.value}".`,
+			fix: "Use null to remove an optional path param."
+		},
+		VUE_ROUTER_R0124: {
+			why: (p) => `The repeatable param "${p.param}" cannot be empty.`,
+			fix: "Pass at least one value, or make the param optional."
+		},
+		VUE_ROUTER_R0123: {
+			why: (p) => `The query value of "${p.key}" is ignored because a param already sets this key.`,
+			fix: (p) => `Pass the value in \`params\` instead of \`query\`, or omit "${p.key}" from \`query\`.`
+		},
+		VUE_ROUTER_R0126: {
+			why: (p) => `An error was thrown while matching "${p.path}" against the route "${p.name}". The route is skipped.`,
+			fix: "Return null from match() to skip a route, or call miss() in a param parser. Fix the thrown error if it is a bug."
+		},
+		VUE_ROUTER_R0129: {
+			why: (p) => `Cannot resolve a relative location without a "name": there is no current location, or the current location has no route. This crashes in production.\nLocation: ${stringifyRoute(p.location)}`,
+			fix: "Pass the location it is relative to as the second argument of resolve(), or use a location with a \"name\" or an absolute \"path\"."
+		},
+		VUE_ROUTER_R0125: {
+			why: (p) => `The params, query, or hash do not match the route "${p.name}".`,
+			fix: "Pass params, query, and hash values that the route matchers accept."
+		},
+		VUE_ROUTER_D0001: {
+			why: (p) => `Route "${p.name}" uses beforeEnter, which is deprecated in the experimental router.`,
+			fix: "Move the condition to the route meta field and check to.meta in router.beforeEach()."
+		},
+		VUE_ROUTER_R0130: {
+			why: (p) => `Cannot resolve a relative location before the initial navigation. This throws in production.\nLocation: ${stringifyRoute(p.location)}`,
+			fix: "Use a \"name\" or an absolute \"path\", or await router.isReady() before mounting the app."
+		},
+		VUE_ROUTER_D0002: {
+			why: (p) => `The query value of "${p.key}" is not an array (${p.value}). Non array query values are deprecated in the experimental router.`,
+			fix: (p) => `Wrap the value in an array: \`{ ${JSON.stringify(p.key)}: [${p.value}] }\`. Use undefined to remove the key.`
+		},
+		VUE_ROUTER_D0003: {
+			why: "The \"custom\" prop of <RouterLink> is deprecated in the experimental router. It will be removed in the next major version.",
+			fix: "Use useLink() in your own link component instead.",
+			docs: "https://router.vuejs.org/guide/advanced/extending-router-link.html"
+		},
+		VUE_ROUTER_R0001: {
+			why: (p) => `Parent route "${p.name}" not found when adding child route`,
+			fix: "Add the parent route before its children, or check the parent name for typos.",
+			docs: "https://router.vuejs.org/guide/advanced/dynamic-routing.html#Adding-nested-routes"
+		},
+		VUE_ROUTER_R0002: {
+			why: (p) => `Cannot remove non-existent route "${p.name}"`,
+			fix: "Check the route name; it may already have been removed or was never added.",
+			docs: "https://router.vuejs.org/guide/advanced/dynamic-routing.html#Removing-routes"
+		},
+		VUE_ROUTER_R0003: {
+			why: (p) => `Location "${stringifyRoute(p.location)}" resolved to "${p.href}". A resolved location cannot start with multiple slashes.`,
+			fix: "Remove the leading slashes from the location or fix the route configuration."
+		},
+		VUE_ROUTER_R0004: {
+			why: (p) => `No match found for location with path "${stringifyRoute(p.path)}"`,
+			fix: "Add a route matching this path or check for typos in the location.",
+			docs: "https://router.vuejs.org/guide/essentials/dynamic-matching.html#Catch-all-404-Not-found-Route"
+		},
+		VUE_ROUTER_R0005: {
+			why: (p) => `router.resolve() was passed an invalid location. This will fail in production.\nLocation: ${stringifyRoute(p.rawLocation)}`,
+			fix: "Pass a valid route location: a string path or an object with `path` or `name`."
+		},
+		VUE_ROUTER_R0006: {
+			why: (p) => `Path "${p.path}" was passed with params but they will be ignored because a "path" was passed.`,
+			fix: "Use a named route `{ name, params }` instead of `{ path, params }`.",
+			docs: "https://router.vuejs.org/guide/essentials/navigation.html#Navigate-to-a-different-location"
+		},
+		VUE_ROUTER_R0007: {
+			why: (p) => `A \`hash\` should always start with the character "#" but received "${p.hash}".`,
+			fix: (p) => `Prepend "#" to the hash in your route location: use "#${p.hash}".`
+		},
+		VUE_ROUTER_R0008: {
+			why: (p) => `Invalid redirect found:\n${p.target}\n when navigating to "${p.to}".\nThis will break in production.`,
+			fix: "A redirect must resolve to a location with a `name` or `path`; return one of those (or a string path) from `redirect`.",
+			docs: "https://router.vuejs.org/guide/essentials/redirect-and-alias.html#Redirect"
+		},
+		VUE_ROUTER_R0009: {
+			why: (p) => `Detected a possibly infinite redirection in a navigation guard when going from "${p.from}" to "${p.to}". Aborting to avoid a Stack Overflow. This might break in production if not fixed.`,
+			fix: "A guard is returning a new location on every call; make that return conditional so it only redirects when actually needed.",
+			docs: "https://router.vuejs.org/guide/advanced/navigation-guards.html#Global-Before-Guards"
+		},
+		VUE_ROUTER_R0010: {
+			why: "Uncaught error during route navigation",
+			fix: "Register an error handler with `router.onError()` to handle navigation errors."
+		},
+		VUE_ROUTER_R0011: {
+			why: "Unexpected error when starting the router:",
+			fix: "Inspect the actual cause; a navigation guard or async component likely threw during the initial navigation."
+		},
+		VUE_ROUTER_R0020: {
+			why: (p) => `No active route record was found when calling \`${p.fn}()\`. Maybe you called it inside of App.vue?`,
+			fix: "Call it from a component rendered inside <router-view> (a page component or one of its children), not from App.vue.",
+			docs: "https://router.vuejs.org/guide/advanced/composition-api.html#Navigation-Guards"
+		},
+		VUE_ROUTER_R0021: {
+			why: "No active route record was found when reactivating component with navigation guard. This is likely a bug in vue-router.",
+			fix: "Report with a minimal reproduction at https://github.com/vuejs/router/issues/new/choose."
+		},
+		VUE_ROUTER_R0022: {
+			why: (p) => `${p.fn}() was called outside of component setup but it must be called at the top of a setup function`,
+			fix: "Call it synchronously at the top of `setup()`, before any `await`.",
+			docs: "https://router.vuejs.org/guide/advanced/composition-api.html#Navigation-Guards"
+		},
+		VUE_ROUTER_R0023: {
+			why: (p) => `The "next" callback was never called inside of ${p.name ? `"${p.name}"` : ""}:\n${p.guard}`,
+			fix: "Make sure `next()` runs on every branch, including early returns and async paths, or drop the `next` parameter and return the value instead.",
+			docs: "https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next"
+		},
+		VUE_ROUTER_R0024: {
+			why: (p) => `The "next" callback was called more than once in one navigation guard when going from "${p.from}" to "${p.to}". This will fail in production.`,
+			fix: "Call `next()` exactly once per guard: remove the extra call, or migrate to returning the value you passed to `next()`.",
+			docs: "https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next"
+		},
+		VUE_ROUTER_R0025: {
+			why: "The `next()` callback in navigation guards is deprecated.",
+			fix: "Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next(\"/path\")` becomes `return \"/path\"`.",
+			docs: "https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next"
+		},
+		VUE_ROUTER_R0026: {
+			why: (p) => `Record with path "${p.path}" is either missing a "component(s)" or "children" property.`,
+			fix: "Add a `component`, `components`, or `children` to the route record.",
+			docs: "https://router.vuejs.org/guide/essentials/nested-routes.html"
+		},
+		VUE_ROUTER_R0027: {
+			why: (p) => `Component "${p.name}" in record with path "${p.path}" is not a valid component. Received "${p.received}".`,
+			fix: "Pass a component or a function returning a Promise that resolves to one."
+		},
+		VUE_ROUTER_R0028: {
+			why: (p) => `Component "${p.name}" in record with path "${p.path}" is a Promise instead of a function that returns a Promise. This will break in production if not fixed.`,
+			fix: `Defer the import in an arrow function so it loads lazily: write "() => import('./MyPage.vue')", not "import('./MyPage.vue')".`,
+			docs: "https://router.vuejs.org/guide/advanced/lazy-loading.html"
+		},
+		VUE_ROUTER_R0029: {
+			why: (p) => `Component "${p.name}" in record with path "${p.path}" is defined using "defineAsyncComponent()".`,
+			fix: `Drop the wrapper and pass "() => import('./MyPage.vue')" directly; the router handles lazy components itself.`,
+			docs: "https://router.vuejs.org/guide/advanced/lazy-loading.html#Relationship-to-async-components"
+		},
+		VUE_ROUTER_R0030: {
+			why: (p) => `Component "${p.name}" in record with path "${p.path}" is a function that does not return a Promise. This will break in production if not fixed.`,
+			fix: "Return a dynamic import (`() => import(\"./MyPage.vue\")`) from the function, or add a `displayName` if it is a functional component.",
+			docs: "https://router.vuejs.org/guide/advanced/lazy-loading.html"
+		},
+		VUE_ROUTER_R0040: {
+			why: (p) => `Because "${p.el}" starts with "#", scrollBehavior resolves it as an element id via document.getElementById("${p.el.slice(1)}"), not as a CSS selector. No element has that id, but "${p.el}" does match an element with document.querySelector().`,
+			fix: (p) => `Resolve the element yourself and return the node: el: document.querySelector('${p.el}').`,
+			docs: "https://router.vuejs.org/guide/advanced/scroll-behavior.html"
+		},
+		VUE_ROUTER_R0041: {
+			why: (p) => `The selector "${p.el}" is invalid. See https://mathiasbynens.be/notes/css-escapes or CSS.escape (https://developer.mozilla.org/en-US/docs/Web/API/CSS/escape) for the escaping rules.`,
+			fix: "Build an id selector as `#${CSS.escape(id)}` so special characters in the id are escaped.",
+			docs: "https://router.vuejs.org/guide/advanced/scroll-behavior.html"
+		},
+		VUE_ROUTER_R0042: {
+			why: (p) => `Couldn't find element using selector "${p.el}" returned by scrollBehavior.`,
+			fix: "Return a selector that matches an existing element, or guard against missing elements.",
+			docs: "https://router.vuejs.org/guide/advanced/scroll-behavior.html"
+		},
+		VUE_ROUTER_R0043: {
+			why: (p) => `Several active useScrollRestoration() calls use the key "${p.key}" with different "capture" or "restore" options. They overwrite each other's saved entry.`,
+			fix: "Give each call a different \"key\", or combine them if they are in the same component."
+		},
+		VUE_ROUTER_R0044: {
+			why: "No ScrollRestoration plugin is available to useScrollRestoration().",
+			fix: "Install ScrollRestoration on the app before calling useScrollRestoration()."
+		},
+		VUE_ROUTER_R0050: {
+			why: (p) => {
+				let to;
+				try {
+					to = p.to === void 0 ? "undefined" : JSON.stringify(p.to);
+				} catch {
+					to = String(p.to);
+				}
+				return `Invalid value for prop "to" in useLink()\n- to: ${to}`;
+			},
+			fix: "Pass a valid route location (a string path or an object) to the \"to\" prop."
+		},
+		VUE_ROUTER_R0051: {
+			why: "<RouterLink custom> is not supported in Vapor mode.",
+			fix: "Use useLink() in your own link component instead.",
+			docs: "https://router.vuejs.org/guide/advanced/extending-router-link.html"
+		},
+		VUE_ROUTER_R0060: {
+			why: (p) => `<router-view> can no longer be used directly inside <${p.comp}>.`,
+			fix: (p) => `Wrap the slot's resolved component with <${p.comp}> instead of nesting <router-view> in it:\n\n<router-view v-slot="{ Component }">\n  <${p.comp}>\n    <component :is="Component" />\n  </${p.comp}>\n</router-view>`,
+			docs: "https://router.vuejs.org/guide/advanced/router-view-slot.html#KeepAlive-Transition"
+		},
+		VUE_ROUTER_R0070: {
+			why: (p) => `Cannot resolve a relative location without an absolute path. Trying to resolve "${p.to}" from "${p.from}".`,
+			fix: (p) => `Resolve from an absolute \`from\` path that starts with "/", e.g. "/${p.from}".`
+		},
+		VUE_ROUTER_R0080: {
+			why: (p) => `Error decoding "${p.text}". Using original value`,
+			fix: "Ensure the value is correctly percent-encoded."
+		},
+		VUE_ROUTER_R0090: {
+			why: (p) => `Found duplicated params with name "${p.name}" for path "${p.path}". Only the last one will be available on "$route.params".`,
+			fix: "Give each param a unique name within the path.",
+			docs: "https://router.vuejs.org/guide/essentials/route-matching-syntax.html"
+		},
+		VUE_ROUTER_R0100: {
+			why: (p) => `Discarded invalid param(s) "${p.params}" when navigating.` + p.inherited + ` See https://github.com/vuejs/router/commit/e887570 for more details.`,
+			fix: "Only pass params that exist on the target route."
+		},
+		VUE_ROUTER_R0101: {
+			why: (p) => `The Matcher cannot resolve relative paths but received "${p.path}". Unless you directly called \`matcher.resolve("${p.path}")\`, this is probably a bug in vue-router. Please open an issue at https://github.com/vuejs/router/issues/new/choose.`,
+			fix: "Pass an absolute path (starting with \"/\") to the matcher."
+		},
+		VUE_ROUTER_R0102: {
+			why: (p) => `Alias "${p.alias}" and the original record: "${p.original}" must have the exact same param named "${p.name}"`,
+			fix: "Use the same param names in the alias as in the original route.",
+			docs: "https://router.vuejs.org/guide/essentials/redirect-and-alias.html#Alias"
+		},
+		VUE_ROUTER_R0103: {
+			why: (p) => `The route named "${p.name}" has a child without a name, an empty path, and no children. Using that name won't render the empty path child, so this is probably a mistake.`,
+			fix: "Move the `name` onto the empty-path child; or, if intentional, give the child its own name to silence this.",
+			docs: "https://router.vuejs.org/guide/essentials/nested-routes.html#Nested-Named-Routes"
+		},
+		VUE_ROUTER_R0104: {
+			why: (p) => `Absolute path "${p.path}" must have the exact same param named "${p.name}" as its parent "${p.parent}".`,
+			fix: "Include the parent route params in the absolute child path.",
+			docs: "https://router.vuejs.org/guide/essentials/nested-routes.html"
+		},
+		VUE_ROUTER_R0105: {
+			why: (p) => `Finding ancestor route "${p.ancestor}" failed for "${p.record}"`,
+			fix: "Report a reproduction at https://github.com/vuejs/router/issues/new/choose."
+		},
+		VUE_ROUTER_R0106: {
+			why: (p) => `Repeatable param "${p.name}" was provided without an array.`,
+			fix: (p) => `Pass it as an array, even when it has one item: { ${JSON.stringify(p.name)}: [value] }. If the param is optional (e.g. ":${p.name}*"), pass an empty array or null to remove it.`
+		},
+		VUE_ROUTER_R0107: {
+			why: (p) => `The required param "${p.param}" is set to "${p.value}" but it keeps its current value.`,
+			fix: (p) => `Omit "${p.param}" to keep its current value, or pass a new value.`
+		},
+		VUE_ROUTER_R0131: {
+			why: (p) => `The repeatable param "${p.param}" in "${p.path}" is not alone in its segment. This throws a generic SyntaxError in production.`,
+			fix: "Put the repeatable param in its own segment, e.g. \"/users/:ids+\".",
+			docs: "https://router.vuejs.org/guide/essentials/route-matching-syntax.html#Repeatable-params"
+		},
+		VUE_ROUTER_R0110: {
+			why: `A hash base must end with a "#"`,
+			fix: (p) => `Append "#" to the "base" argument passed to "createWebHashHistory()": "${p.base}" should be "${p.suggestion}".`
+		},
+		VUE_ROUTER_R0120: {
+			why: "Error with push/replace State",
+			fix: "The browser rejected the history API call; check for cross-origin or rate-limit issues."
+		},
+		VUE_ROUTER_R0121: {
+			why: "history.state seems to have been manually replaced without preserving the necessary values.\nYou can find more information at https://router.vuejs.org/guide/migration/#Usage-of-history-state",
+			fix: "Merge the router's state into your own when calling it manually: `history.replaceState({ ...history.state, ...yourState }, '', url)`.",
+			docs: "https://router.vuejs.org/guide/migration.html#Usage-of-history-state"
+		},
+		VUE_ROUTER_R0127: {
+			why: "The page is loaded from a file:// URL. createWebHistory() cannot reliably change the path of file:// URLs.",
+			fix: "Use createWebHashHistory() instead.",
+			docs: "https://router.vuejs.org/guide/essentials/history-mode.html#hash-mode"
+		},
+		VUE_ROUTER_R0128: {
+			why: "The page is loaded in an about: URL (e.g. an iframe with srcdoc). Browsers do not let the web and hash histories change this URL.",
+			fix: "Use createMemoryHistory() instead.",
+			docs: "https://router.vuejs.org/guide/essentials/history-mode.html#memory-mode"
+		},
+		VUE_ROUTER_R1001: {
+			why: (p) => `Data loader "${String(p.key)}" has a different parent than the current context. This shouldn't be happening.`,
+			fix: "Report a bug with a minimal reproduction at https://github.com/vuejs/router/."
+		},
+		VUE_ROUTER_R1002: {
+			why: "Returning a NavigationResult is deprecated.",
+			fix: "Replace `return new NavigationResult(to)` with `reroute(to)`, which throws internally to reroute.",
+			docs: "https://router.vuejs.org/data-loaders/navigation-aware.html#Controlling-the-navigation-with-reroute-"
+		},
+		VUE_ROUTER_R1003: {
+			why: (p) => `Loader "${p.key}"'s "commit()" was called but there is no staged data.`,
+			fix: "Ensure the loader resolved before calling `commit()`.",
+			docs: "https://router.vuejs.org/data-loaders/defining-loaders.html#Delaying-data-updates-with-commit"
+		},
+		VUE_ROUTER_R1004: {
+			why: (p) => "A loader returned a NavigationResult but is not registered on the route." + p.key,
+			fix: "Export the loader from the page component so it gets registered, e.g. `export const useUserData = defineLoader(...)`.",
+			docs: "https://router.vuejs.org/data-loaders/organization.html"
+		},
+		VUE_ROUTER_R1005: {
+			why: (p) => `Data loader "${p.key}" has itself as parent. This shouldn't be happening.`,
+			fix: "Report a bug with a minimal reproduction at https://github.com/vuejs/router/."
+		},
+		VUE_ROUTER_R1006: {
+			why: (p) => `A query was defined with the same key as the loader "[${p.key}]".\nSee https://pinia-colada.esm.dev/#TODO`,
+			fix: "If the key is meant to match, use the data loader directly; otherwise rename the `useQuery()` key so it no longer collides.",
+			docs: "https://router.vuejs.org/data-loaders/colada.html"
+		},
+		VUE_ROUTER_R1007: {
+			why: "Data Loader was setup twice.",
+			fix: "Register `DataLoaderPlugin` a single time via `app.use()`.",
+			docs: "https://router.vuejs.org/data-loaders.html#Installation"
+		},
+		VUE_ROUTER_R1008: {
+			why: "Data Loader is experimental and subject to breaking changes in the future.",
+			docs: "https://router.vuejs.org/data-loaders.html"
+		},
+		VUE_ROUTER_R1009: {
+			why: "Returning a NavigationResult from a loader is deprecated.",
+			fix: "Call `reroute(to)` inside the loader instead of returning `new NavigationResult(to)`; it throws internally to reroute.",
+			docs: "https://router.vuejs.org/data-loaders/navigation-aware.html#Controlling-the-navigation-with-reroute-"
+		}
+	}
+});
+
+/*!
+* vue-router v5.5.2
+* (c) 2026 Eduardo San Martin Morote
+* @license MIT
+*/
+function isRouteName(name) {
+	return typeof name === "string" || typeof name === "symbol";
+}
+
+/*!
+* vue-router v5.5.2
+* (c) 2026 Eduardo San Martin Morote
+* @license MIT
+*/
+// src/matcher/pathTokenizer.ts
+const ROOT_TOKEN = {
+	type: 0,
+	value: ""
+};
+const VALID_PARAM_RE = /[a-zA-Z0-9_]/;
+function tokenizePath(path) {
+	if (!path) return [[]];
+	if (path === "/") return [[ROOT_TOKEN]];
+	if (!isAbsolutePath(path)) throw new Error(`Route paths should start with a "/": "${path}" should be "/${path}".` );
+	function crash(message) {
+		throw new Error(`ERR (${state})/"${buffer}": ${message}`);
+	}
+	let state = 0;
+	let previousState = state;
+	const tokens = [];
+	let segment;
+	function finalizeSegment() {
+		if (segment) tokens.push(segment);
+		segment = [];
+	}
+	let i = 0;
+	let char;
+	let buffer = "";
+	let customRe = "";
+	function consumeBuffer() {
+		if (!buffer) return;
+		const lastToken = segment[segment.length - 1];
+		if (lastToken?.type === 1 && lastToken.repeatable) throw diagnostics.VUE_ROUTER_R0131({
+			param: lastToken.value,
+			path
+		}) ;
+		if (state === 0) segment.push({
+			type: 0,
+			value: buffer
+		});
+		else if (state === 1 || state === 2 || state === 3) {
+			if (segment.length && (char === "*" || char === "+")) throw diagnostics.VUE_ROUTER_R0131({
+				param: buffer,
+				path
+			}) ;
+			segment.push({
+				type: 1,
+				value: buffer,
+				regexp: customRe,
+				repeatable: char === "*" || char === "+",
+				optional: char === "*" || char === "?"
+			});
+		} else crash("Invalid state to consume buffer");
+		buffer = "";
+	}
+	function addCharToBuffer() {
+		buffer += char;
+	}
+	while (i < path.length) {
+		char = path[i++];
+		switch (state) {
+			case 0:
+				if (char === "\\") {
+					previousState = state;
+					state = 4;
+				} else if (char === "/") {
+					if (buffer) consumeBuffer();
+					finalizeSegment();
+				} else if (char === ":") {
+					consumeBuffer();
+					state = 1;
+				} else addCharToBuffer();
+				break;
+			case 4:
+				addCharToBuffer();
+				state = previousState;
+				break;
+			case 1:
+				if (char === "(") state = 2;
+				else if (VALID_PARAM_RE.test(char)) addCharToBuffer();
+				else {
+					consumeBuffer();
+					state = 0;
+					if (char !== "*" && char !== "?" && char !== "+") i--;
+				}
+				break;
+			case 2:
+				if (char === ")") {
+					if (customRe[customRe.length - 1] == "\\") customRe = customRe.slice(0, -1) + char;
+					else state = 3;
+				} else customRe += char;
+				break;
+			case 3:
+				consumeBuffer();
+				state = 0;
+				if (char !== "*" && char !== "?" && char !== "+") i--;
+				customRe = "";
+				break;
+			default: crash("Unknown state");
+		}
+	}
+	if (state === 2) crash(`Unfinished custom RegExp for param "${buffer}"`);
+	consumeBuffer();
+	finalizeSegment();
+	return tokens;
+}
+// src/matcher/pathParserRanker.ts
+const BASE_PARAM_PATTERN = "[^/]+?";
+const BASE_PATH_PARSER_OPTIONS = {
+	sensitive: false,
+	strict: false,
+	start: true,
+	end: true
+};
+const REGEX_CHARS_RE = /[.+*?^${}()[\]/\\|]/g;
+/**
+* Creates a path parser from an array of Segments (a segment is an array of Tokens)
+*
+* @param segments - array of segments returned by tokenizePath
+* @param extraOptions - optional options for the regexp
+* @returns a PathParser
+*/
+function tokensToParser(segments, extraOptions) {
+	const options = assign({}, BASE_PATH_PARSER_OPTIONS, extraOptions);
+	const score = [];
+	let pattern = options.start ? "^" : "";
+	const keys = [];
+	const hasBackreference = segments.some((segment) => segment.some((token) => token.type === 1 && /\\[1-9k]/.test(token.regexp || "")));
+	for (const segment of segments) {
+		const segmentScores = segment.length ? [] : [90];
+		if (options.strict && !segment.length) pattern += "/";
+		for (let tokenIndex = 0; tokenIndex < segment.length; tokenIndex++) {
+			const token = segment[tokenIndex];
+			let subSegmentScore = 40 + (options.sensitive ? .25 : 0);
+			if (token.type === 0) {
+				if (!tokenIndex) pattern += "/";
+				pattern += token.value.replace(REGEX_CHARS_RE, "\\$&");
+				subSegmentScore += 40;
+			} else if (token.type === 1) {
+				const { value, repeatable, optional, regexp } = token;
+				keys.push({
+					name: value,
+					repeatable,
+					optional
+				});
+				const re = regexp ? regexp : BASE_PARAM_PATTERN;
+				if (re !== BASE_PARAM_PATTERN) {
+					subSegmentScore += 10;
+					try {
+						new RegExp(`(${re})`);
+					} catch (err) {
+						throw new Error(`Invalid custom RegExp for param "${value}" (${re}): ` + err.message);
+					}
+				}
+				let subPattern = repeatable && re !== ".+" && re !== ".*" ? `((?:${re})(?:/(?:${re}))*)` : `(${re})`;
+				const next = segment[tokenIndex + 1];
+				const afterNext = segment[tokenIndex + 2];
+				if (!hasBackreference && !regexp && !repeatable && afterNext && afterNext.type === 1 && !afterNext.regexp && next.type === 0) subPattern = `([^/](?:(?!${next.value.replace(REGEX_CHARS_RE, "\\$&")})[^/])*)`;
+				if (!tokenIndex) subPattern = optional && segment.length < 2 ? `(?:/${subPattern})` : "/" + subPattern;
+				if (optional) subPattern += "?";
+				pattern += subPattern;
+				subSegmentScore += 20;
+				if (optional) subSegmentScore += -8;
+				if (repeatable) subSegmentScore += -20;
+				if (re === ".*") subSegmentScore += -50;
+			}
+			segmentScores.push(subSegmentScore);
+		}
+		score.push(segmentScores);
+	}
+	if (options.strict && options.end) {
+		const i = score.length - 1;
+		score[i][score[i].length - 1] += .7000000000000001;
+	}
+	if (!options.strict) pattern += "/?";
+	if (options.end) pattern += "$";
+	else if (options.strict && !pattern.endsWith("/")) pattern += "(?:/|$)";
+	const re = new RegExp(pattern, options.sensitive ? "" : "i");
+	function parse(path) {
+		const match = path.match(re);
+		const params = {};
+		if (!match) return null;
+		for (let i = 1; i < match.length; i++) {
+			const value = match[i] || "";
+			const key = keys[i - 1];
+			params[key.name] = value && key.repeatable ? value.split("/") : value;
+		}
+		return params;
+	}
+	function stringify(params) {
+		let path = "";
+		let avoidDuplicatedSlash = false;
+		for (const segment of segments) {
+			if (!avoidDuplicatedSlash || !path.endsWith("/")) path += "/";
+			avoidDuplicatedSlash = false;
+			for (const token of segment) if (token.type === 0) path += token.value;
+			else if (token.type === 1) {
+				const { value, repeatable, optional } = token;
+				const param = value in params ? params[value] : "";
+				if (isArray(param) && !repeatable) throw new Error(`Provided param "${value}" is an array but it is not repeatable (* or + modifiers)`);
+				const text = isArray(param) ? param.join("/") : param;
+				if (!text) {
+					if (optional) {
+						if (segment.length < 2) {
+							if (path.endsWith("/")) path = path.slice(0, -1);
+							else avoidDuplicatedSlash = true;
+						}
+					} else throw new Error(`Missing required param "${value}"`);
+				}
+				path += text;
+			}
+		}
+		return path || "/";
+	}
+	return {
+		re,
+		score,
+		keys,
+		parse,
+		stringify
+	};
+}
+/**
+* Compares an array of numbers as used in PathParser.score and returns a
+* number. This function can be used to `sort` an array
+*
+* @param a - first array of numbers
+* @param b - second array of numbers
+* @returns 0 if both are equal, < 0 if a should be sorted first, > 0 if b
+* should be sorted first
+*/
+function compareScoreArray(a, b) {
+	let i = 0;
+	while (i < a.length && i < b.length) {
+		const diff = b[i] - a[i];
+		if (diff) return diff;
+		i++;
+	}
+	if (a.length < b.length) return a.length === 1 && a[0] === 80 ? -1 : 1;
+	else if (a.length > b.length) return b.length === 1 && b[0] === 80 ? 1 : -1;
+	return 0;
+}
+/**
+* Compare function that can be used with `sort` to sort an array of PathParser
+*
+* @param a - first PathParser
+* @param b - second PathParser
+* @returns 0 if both are equal, < 0 if a should be sorted first, > 0 if b
+*/
+function comparePathParserScore(a, b) {
+	let i = 0;
+	const aScore = a.score;
+	const bScore = b.score;
+	while (i < aScore.length && i < bScore.length) {
+		const comp = compareScoreArray(aScore[i], bScore[i]);
+		if (comp) return comp;
+		i++;
+	}
+	if (Math.abs(bScore.length - aScore.length) === 1) {
+		if (isLastScoreNegative(aScore)) return 1;
+		if (isLastScoreNegative(bScore)) return -1;
+	}
+	return bScore.length - aScore.length;
+}
+/**
+* This allows detecting splats at the end of a path: /home/:id(.*)*
+*
+* @param score - score to check
+* @returns true if the last entry is negative
+*/
+function isLastScoreNegative(score) {
+	const last = score[score.length - 1];
+	return score.length > 0 && last[last.length - 1] < 0;
+}
+const PATH_PARSER_OPTIONS_DEFAULTS = {
+	strict: false,
+	end: true,
+	sensitive: false
+};
+// src/matcher/pathMatcher.ts
+function createRouteRecordMatcher(record, parent, options) {
+	const parser = tokensToParser(tokenizePath(record.path), options);
+	{
+		const existingKeys = /* @__PURE__ */ new Set();
+		for (const key of parser.keys) {
+			if (existingKeys.has(key.name)) diagnostics.VUE_ROUTER_R0090({
+				name: key.name,
+				path: record.path
+			});
+			existingKeys.add(key.name);
+		}
+	}
+	const matcher = assign(parser, {
+		record,
+		parent,
+		children: [],
+		alias: []
+	});
+	if (parent) {
+		if (!matcher.record.aliasOf === !parent.record.aliasOf) parent.children.push(matcher);
+	}
+	return matcher;
+}
+// src/matcher/index.ts
+/**
+* Creates a Router Matcher.
+*
+* @internal
+* @param routes - array of initial routes
+* @param globalOptions - global route options
+*/
+function createRouterMatcher(routes, globalOptions) {
+	const matchers = [];
+	const matcherMap = /* @__PURE__ */ new Map();
+	globalOptions = mergeOptions(PATH_PARSER_OPTIONS_DEFAULTS, globalOptions);
+	function getRecordMatcher(name) {
+		return matcherMap.get(name);
+	}
+	function addRoute(record, parent, originalRecord) {
+		const isRootAdd = !originalRecord;
+		const mainNormalizedRecord = normalizeRouteRecord(record);
+		checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent);
+		mainNormalizedRecord.aliasOf = originalRecord && originalRecord.record;
+		const options = mergeOptions(globalOptions, record);
+		const normalizedRecords = [mainNormalizedRecord];
+		if ("alias" in record) {
+			const aliases = typeof record.alias === "string" ? [record.alias] : record.alias;
+			for (const alias of aliases) normalizedRecords.push(normalizeRouteRecord(assign({}, mainNormalizedRecord, {
+				components: originalRecord ? originalRecord.record.components : mainNormalizedRecord.components,
+				path: alias,
+				aliasOf: originalRecord ? originalRecord.record : mainNormalizedRecord
+			})));
+		}
+		let matcher;
+		let originalMatcher;
+		for (const normalizedRecord of normalizedRecords) {
+			const { path } = normalizedRecord;
+			if (parent && !isAbsolutePath(path)) {
+				const parentPath = parent.record.path;
+				const connectingSlash = parentPath[parentPath.length - 1] === "/" ? "" : "/";
+				normalizedRecord.path = parent.record.path + (path && connectingSlash + path);
+			}
+			if (normalizedRecord.path === "*") throw new Error("Catch all routes (\"*\") must now be defined using a param with a custom regexp.\nSee more at https://router.vuejs.org/guide/migration/#Removed-star-or-catch-all-routes.");
+			matcher = createRouteRecordMatcher(normalizedRecord, parent, options);
+			if (parent && isAbsolutePath(path)) checkMissingParamsInAbsolutePath(matcher, parent);
+			if (originalRecord) {
+				originalRecord.alias.push(matcher);
+				checkSameParams(originalRecord, matcher);
+			} else {
+				originalMatcher = originalMatcher || matcher;
+				if (originalMatcher !== matcher) originalMatcher.alias.push(matcher);
+				if (isRootAdd && record.name && !isAliasRecord(matcher)) {
+					checkSameNameAsAncestor(record, parent);
+					removeRoute(record.name);
+				}
+			}
+			if (isMatchable(matcher)) insertMatcher(matcher);
+			if (mainNormalizedRecord.children) {
+				const children = mainNormalizedRecord.children;
+				for (let i = 0; i < children.length; i++) addRoute(children[i], matcher, originalRecord && originalRecord.children[i]);
+			}
+			originalRecord = originalRecord || matcher;
+		}
+		return originalMatcher ? () => {
+			removeRoute(originalMatcher);
+		} : noop;
+	}
+	function removeRoute(matcherRef) {
+		if (isRouteName(matcherRef)) {
+			const matcher = matcherMap.get(matcherRef);
+			if (matcher) {
+				matcherMap.delete(matcherRef);
+				matchers.splice(matchers.indexOf(matcher), 1);
+				matcher.children.forEach(removeRoute);
+				matcher.alias.forEach(removeRoute);
+			}
+		} else {
+			const index = matchers.indexOf(matcherRef);
+			if (index > -1) {
+				matchers.splice(index, 1);
+				if (matcherRef.record.name) matcherMap.delete(matcherRef.record.name);
+			}
+			matcherRef.children.forEach(removeRoute);
+			matcherRef.alias.forEach(removeRoute);
+		}
+	}
+	function getRoutes() {
+		return matchers;
+	}
+	function insertMatcher(matcher) {
+		const index = findInsertionIndex(matcher, matchers);
+		matchers.splice(index, 0, matcher);
+		if (matcher.record.name && !isAliasRecord(matcher)) matcherMap.set(matcher.record.name, matcher);
+	}
+	function resolve(location, currentLocation) {
+		let matcher;
+		let params = {};
+		let path;
+		let name;
+		if ("name" in location && location.name) {
+			matcher = matcherMap.get(location.name);
+			if (!matcher) throw createRouterError(1, { location });
+			{
+				const explicitParams = location.params || {};
+				const invalidParams = Object.keys(explicitParams).filter((paramName) => explicitParams[paramName] != null && !matcher.keys.find((k) => k.name === paramName));
+				if (invalidParams.length) {
+					const isInherited = !matcher.keys.length && invalidParams.some((name) => name in currentLocation.params);
+					diagnostics.VUE_ROUTER_R0100({
+						params: invalidParams.join("\", \""),
+						inherited: isInherited ? ` If you are using a catch-all route with a named redirect, pass an empty \`params\` object: \`redirect: { name: '...', params: {} }\`.` : ""
+					});
+				}
+				checkParamValues(matcher, location.params);
+			}
+			name = matcher.record.name;
+			const inheritedParams = pickParams(currentLocation.params, matcher.keys.filter((k) => !k.optional).concat(matcher.parent ? matcher.parent.keys.filter((k) => k.optional) : []).map((k) => k.name));
+			params = assign({}, inheritedParams, location.params && pickParams(location.params, matcher.keys.map((k) => k.name)));
+			applyNullishParams(matcher, params, inheritedParams);
+			path = matcher.stringify(params);
+		} else if (location.path != null) {
+			path = location.path;
+			if (!isAbsolutePath(path)) diagnostics.VUE_ROUTER_R0101({ path });
+			matcher = matchers.find((m) => m.re.test(path));
+			if (matcher) {
+				params = matcher.parse(path);
+				name = matcher.record.name;
+				matcher.keys.forEach((key) => {
+					if (key.optional && !params[key.name]) delete params[key.name];
+				});
+			}
+		} else {
+			matcher = currentLocation.name ? matcherMap.get(currentLocation.name) : matchers.find((m) => m.re.test(currentLocation.path));
+			if (!matcher) throw createRouterError(1, {
+				location,
+				currentLocation
+			});
+			checkParamValues(matcher, location.params);
+			name = matcher.record.name;
+			params = assign({}, currentLocation.params, location.params);
+			applyNullishParams(matcher, params, currentLocation.params);
+			path = matcher.stringify(params);
+		}
+		const matched = [];
+		let parentMatcher = matcher;
+		while (parentMatcher) {
+			matched.unshift(parentMatcher.record);
+			parentMatcher = parentMatcher.parent;
+		}
+		return {
+			name,
+			path,
+			params,
+			matched,
+			meta: mergeMetaFields(matched)
+		};
+	}
+	routes.forEach((route) => addRoute(route));
+	function clearRoutes() {
+		matchers.length = 0;
+		matcherMap.clear();
+	}
+	return {
+		addRoute,
+		resolve,
+		removeRoute,
+		clearRoutes,
+		getRoutes,
+		getRecordMatcher
+	};
+}
+/**
+* Picks an object param to contain only specified keys.
+*
+* @param params - params object to pick from
+* @param keys - keys to pick
+*/
+function pickParams(params, keys) {
+	const newParams = {};
+	for (const key of keys) if (key in params) newParams[key] = params[key];
+	return newParams;
+}
+/**
+* Normalizes a RouteRecordRaw. Creates a copy
+*
+* @param record
+* @returns the normalized version
+*/
+function normalizeRouteRecord(record) {
+	const normalized = {
+		path: record.path,
+		redirect: record.redirect,
+		name: record.name,
+		meta: record.meta || {},
+		aliasOf: record.aliasOf,
+		beforeEnter: record.beforeEnter,
+		props: normalizeRecordProps(record),
+		children: record.children || [],
+		instances: {},
+		leaveGuards: /* @__PURE__ */ new Set(),
+		updateGuards: /* @__PURE__ */ new Set(),
+		enterCallbacks: {},
+		components: "components" in record ? record.components || null : record.component && { default: record.component }
+	};
+	Object.defineProperty(normalized, "mods", { value: {} });
+	return normalized;
+}
+/**
+* Normalize the optional `props` in a record to always be an object similar to
+* components. Also accept a boolean for components.
+* @param record
+*/
+function normalizeRecordProps(record) {
+	const propsObject = {};
+	const props = record.props || false;
+	if ("component" in record) propsObject.default = props;
+	else for (const name in record.components) propsObject[name] = typeof props === "object" ? props[name] : props;
+	return propsObject;
+}
+/**
+* Checks if a record or any of its parent is an alias
+* @param record
+*/
+function isAliasRecord(record) {
+	while (record) {
+		if (record.record.aliasOf) return true;
+		record = record.parent;
+	}
+	return false;
+}
+/**
+* Merge meta fields of an array of records
+*
+* @param matched - array of matched records
+*/
+function mergeMetaFields(matched) {
+	return matched.reduce((meta, record) => assign(meta, record.meta), {});
+}
+function isSameParam(a, b) {
+	return a.name === b.name && a.optional === b.optional && a.repeatable === b.repeatable;
+}
+/**
+* Check if a path and its alias have the same required params
+*
+* @param a - original record
+* @param b - alias record
+*/
+function checkSameParams(a, b) {
+	for (const key of a.keys) if (!key.optional && !b.keys.find(isSameParam.bind(null, key))) {
+		diagnostics.VUE_ROUTER_R0102({
+			alias: b.record.path,
+			original: a.record.path,
+			name: key.name
+		});
+		return;
+	}
+	for (const key of b.keys) if (!key.optional && !a.keys.find(isSameParam.bind(null, key))) {
+		diagnostics.VUE_ROUTER_R0102({
+			alias: b.record.path,
+			original: a.record.path,
+			name: key.name
+		});
+		return;
+	}
+}
+/**
+* A route with a name and a child with an empty path without a name should warn when adding the route
+*
+* @param mainNormalizedRecord - RouteRecordNormalized
+* @param parent - RouteRecordMatcher
+*/
+function checkChildMissingNameWithEmptyPath(mainNormalizedRecord, parent) {
+	if (parent && parent.record.name && !mainNormalizedRecord.name && !mainNormalizedRecord.path && mainNormalizedRecord.children.length === 0) diagnostics.VUE_ROUTER_R0103({ name: String(parent.record.name) });
+}
+function checkSameNameAsAncestor(record, parent) {
+	for (let ancestor = parent; ancestor; ancestor = ancestor.parent) if (ancestor.record.name === record.name) throw new Error(`A route named "${String(record.name)}" has been added as a ${parent === ancestor ? "child" : "descendant"} of a route with the same name. Route names must be unique and a nested route cannot use the same name as an ancestor.`);
+}
+/**
+* Handles nullish values of explicit params: they remove optional params and
+* keep the inherited value of required params.
+*
+* @param matcher - matcher of the resolved location
+* @param params - merged params, modified in place
+* @param inheritedParams - params inherited from the current location
+*/
+function applyNullishParams(matcher, params, inheritedParams) {
+	for (const name in params) {
+		const value = params[name];
+		if (value == null) {
+			const key = matcher.keys.find((k) => k.name === name);
+			if (key && !key.optional && name in inheritedParams) {
+				params[name] = inheritedParams[name];
+				diagnostics.VUE_ROUTER_R0107({
+					param: name,
+					value: String(value)
+				});
+			} else {
+				delete params[name];
+				if (value === void 0 && key?.optional) diagnostics.VUE_ROUTER_R0122({
+					param: name,
+					value: "undefined"
+				});
+			}
+		}
+	}
+}
+/**
+* Warns about explicit param values that are probably mistakes.
+*
+* @param matcher - matcher of the resolved location
+* @param params - params explicitly passed in the location
+*/
+function checkParamValues(matcher, params) {
+	if (!params) return;
+	for (const key of matcher.keys) {
+		const value = params[key.name];
+		if (key.optional && value === "") diagnostics.VUE_ROUTER_R0122({
+			param: key.name,
+			value: "an empty string"
+		});
+		else if (key.repeatable && value != null && !Array.isArray(value)) diagnostics.VUE_ROUTER_R0106({ name: key.name });
+	}
+}
+function checkMissingParamsInAbsolutePath(record, parent) {
+	for (const key of parent.keys) if (!record.keys.find(isSameParam.bind(null, key))) {
+		diagnostics.VUE_ROUTER_R0104({
+			path: record.record.path,
+			name: key.name,
+			parent: parent.record.path
+		});
+		return;
+	}
+}
+/**
+* Performs a binary search to find the correct insertion index for a new matcher.
+*
+* Matchers are primarily sorted by their score. If scores are tied then we also consider parent/child relationships,
+* with descendants coming before ancestors. If there's still a tie, new routes are inserted after existing routes.
+*
+* @param matcher - new matcher to be inserted
+* @param matchers - existing matchers
+*/
+function findInsertionIndex(matcher, matchers) {
+	let lower = 0;
+	let upper = matchers.length;
+	while (lower !== upper) {
+		const mid = lower + upper >> 1;
+		if (comparePathParserScore(matcher, matchers[mid]) < 0) upper = mid;
+		else lower = mid + 1;
+	}
+	const insertionAncestor = getInsertionAncestor(matcher);
+	if (insertionAncestor) {
+		upper = matchers.lastIndexOf(insertionAncestor, upper - 1);
+		if (upper < 0) diagnostics.VUE_ROUTER_R0105({
+			ancestor: insertionAncestor.record.path,
+			record: matcher.record.path
+		});
+	}
+	return upper;
+}
+function getInsertionAncestor(matcher) {
+	let ancestor = matcher;
+	while (ancestor = ancestor.parent) if (isMatchable(ancestor) && comparePathParserScore(matcher, ancestor) === 0) return ancestor;
+}
+/**
+* Checks if a matcher can be reachable. This means if it's possible to reach it as a route. For example, routes without
+* a component, or name, or redirect, are just used to group other routes.
+* @param matcher
+* @param matcher.record record of the matcher
+* @returns
+*/
+function isMatchable({ record }) {
+	return !!(record.name || record.components && Object.keys(record.components).length || record.redirect);
 }
 
 // Generated by @nuxtjs/i18n
@@ -4946,6 +5724,23 @@ function payloadRequestToRoute(path, filename = "_payload.json") {
 	payloadURL.searchParams.delete(PAYLOAD_BUILD_ID_PARAM);
 	return url + payloadURL.search;
 }
+const LEADING_SLASHES_RE = /^\/+/;
+/** Strip every trailing `/` from a path. */
+function withoutTrailingSlashes(path) {
+	let end = path.length;
+	while (end > 0 && path[end - 1] === "/") end--;
+	return path.slice(0, end);
+}
+/** The same-origin `_payload.json` (or `_payload.js`) URL for a page route, tagged with the build id if one is given. */
+function routeToPayloadURL(baseURL, path, buildId, filename = "_payload.json") {
+	const request = parseRequestPath(path);
+	const base = new URL(withoutTrailingSlashes(baseURL) + "/", "http://localhost");
+	const route = withoutTrailingSlashes(request.pathname.replace(LEADING_SLASHES_RE, "")) + "/";
+	const url = new URL("./" + (route === "/" ? "" : route) + filename, base);
+	url.search = request.search;
+	if (buildId) url.searchParams.set(PAYLOAD_BUILD_ID_PARAM, buildId);
+	return URL.canParse(baseURL) ? url.href : url.pathname + url.search;
+}
 /** `url` with its path and query replaced by those of the request path `path`, keeping its origin. */
 function withRequestPath(url, path) {
 	const request = parseRequestPath(path);
@@ -5714,7 +6509,7 @@ const projects = [
   p("mousatech-academy", ["education", "web"], [], ["dashboard.webp", "frontend.webp"]),
   p("dermovive-demo", ["ecommerce", "web"], [], ["homepage.webp", "product-page.webp"]),
   p("hospital-sys", ["healthcare", "management"], [], ["dashboard.webp", "frontend.webp"]),
-  p("snefro", ["web"]),
+  p("sncfiro", ["web"]),
   p("pospro", ["management", "ecommerce"], [], ["dashboard.webp", "reports.webp"]),
   p("coretech", ["business", "web"]),
   p("MousaTech-Agency", ["business", "web"]),
@@ -5728,12 +6523,17 @@ const projects = [
   p("linkapp", ["web"])
 ];
 
-const sitemap_xml = defineEventHandler((event) => {
-  const base = useRuntimeConfig().public.siteUrl.replace(/\/$/, "");
-  const paths = ["", "/about", "/projects", "/skills", "/contact", ...projects.map((p) => `/projects/${p.slug}`)];
-  const urls = paths.flatMap((p) => [`${base}${p}`, `${base}/ar${p}`]);
+const sitemap_xml = defineEventHandler(async (event) => {
+  const cfg = useRuntimeConfig();
+  const base = cfg.public.siteUrl.replace(/\/$/, "");
+  let slugs = projects.map((p) => p.slug);
+  try {
+    slugs = (await $fetch("/projects", { baseURL: cfg.public.apiBase, timeout: 4e3 })).data.map((p) => p.slug);
+  } catch {
+  }
+  const paths = ["", "/about", "/projects", "/skills", "/contact", ...slugs.map((s) => `/projects/${s}`)];
   setHeader(event, "content-type", "application/xml");
-  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${u}</loc></url>`).join("")}</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.flatMap((p) => [`${base}${p}`, `${base}/ar${p}`]).map((u) => `<url><loc>${u}</loc></url>`).join("")}</urlset>`;
 });
 
 const sitemap_xml$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
@@ -5779,6 +6579,7 @@ function renderPayloadJsonScript(opts) {
 		"data-ssr": !(opts.ssrContext.noSSR)
 	};
 	payload.id = "__NUXT_DATA__";
+	if (opts.src) payload["data-src"] = opts.src;
 	const config = uneval(opts.ssrContext.config);
 	return [payload, { innerHTML: `window.__NUXT__={};window.__NUXT__.config=${config}` }];
 }
@@ -5942,16 +6743,26 @@ function pushEntryScripts(ssrContext, scripts, rendererContext, tagPosition = "h
 		crossorigin: ""
 	})) });
 }
+function pushPayloadPreload(ssrContext, href) {
+	ssrContext.head.push({ link: [{
+		rel: "preload",
+		as: "fetch",
+		crossorigin: "anonymous",
+		href
+	} ] });
+}
 /**
 * The payload, inlined in full or split into the initial state and an external `_payload.json`.
 * `prefetchLinks` is only read from a `_payload.json` another page prefetched, so an inlined
 * payload leaves it out.
 */
 function pushPayloadScript(ssrContext, inline, src, routeOptions) {
-	const data = withoutPrefetchLinks(ssrContext.payload) ;
+	const data = inline ? withoutPrefetchLinks(ssrContext.payload) : splitPayload(ssrContext).initial;
 	ssrContext.head.push({ script: renderPayloadJsonScript({
 		ssrContext,
-		data})  }, {
+		data,
+		src: inline ? void 0 : src
+	})  }, {
 		tagPosition: "bodyClose",
 		tagPriority: "high"
 	});
@@ -6056,13 +6867,15 @@ async function renderRoute(instance, event, ssrError) {
 	const DEFER_PREFETCH = !NO_SCRIPTS;
 	if (routeOptions.ssr === false && true) ssrContext.noSSR = true;
 	if (ssrContext.noSSR) for (const input of appComponentHead) ssrContext.head.push(input);
-	!ssrContext.noSSR && !ssrError && false;
-	const isRenderingPayload = (routeOptions.prerender) && PAYLOAD_URL_RE.test(ssrContext.url);
+	const payloadExtraction = !ssrContext.noSSR && !ssrError && !!((routeOptions.isr || routeOptions.cache));
+	const payloadInline = !payloadExtraction || NUXT_PAYLOAD_INLINE;
+	const isRenderingPayload = (payloadExtraction || routeOptions.prerender) && PAYLOAD_URL_RE.test(ssrContext.url);
 	if (isRenderingPayload) {
 		ssrContext.url = payloadRequestToRoute(ssrContext.url, PAYLOAD_FILENAME);
 		event.url = withRequestPath(event.url, ssrContext.url);
 		getPayloadCacheKey(ssrContext.url);
 	}
+	const payloadURL = payloadExtraction ? buildPayloadURL(ssrContext, !!(routeOptions.isr || routeOptions.cache)) : void 0;
 	const renderer = await instance.getRenderer(ssrContext);
 	const { rendererContext } = renderer;
 	const canStream = NUXT_SSR_STREAMING;
@@ -6096,6 +6909,7 @@ async function renderRoute(instance, event, ssrError) {
 	if (!ssrError && !ssrContext.error) runtime.onRenderSuccess?.(event);
 	const { styles, scripts } = getRequestDependencies(ssrContext, rendererContext);
 	pushNoScriptsHints(ssrContext, NO_SCRIPTS);
+	if (payloadExtraction && !payloadInline && !NO_SCRIPTS) pushPayloadPreload(ssrContext, payloadURL);
 	if (entryInlinedStyles.length) ssrContext.head.push({ style: entryInlinedStyles });
 	const link = [];
 	const inlinedHrefs = [];
@@ -6131,7 +6945,7 @@ async function renderRoute(instance, event, ssrError) {
 	for (const l of getPreloadLinks(preloadContext, rendererContext, dependencyOptions)) if (!excludeHrefs.has(l.href)) hints.push(l);
 	for (const l of getPrefetchLinks(preloadContext, rendererContext, dependencyOptions)) if (!excludeHrefs.has(l.href)) (DEFER_PREFETCH ? deferredHints : hints).push(l);
 	if (hints.length) ssrContext.head.push({ link: hints });
-	if (!NO_SCRIPTS) pushPayloadScript(ssrContext);
+	if (!NO_SCRIPTS) pushPayloadScript(ssrContext, payloadInline, payloadURL);
 	if (!routeOptions.noScripts) pushEntryScripts(ssrContext, scripts, rendererContext, "head");
 	const { headTags, bodyTags, bodyTagsOpen, htmlAttrs, bodyAttrs } = renderSSRHead(ssrContext.head, renderSSRHeadOptions);
 	const headNonce = extractCspNonce(headTags) ;
@@ -6179,6 +6993,10 @@ async function renderRoute(instance, event, ssrError) {
 		...response,
 		body: documentContext.html
 	};
+}
+function buildPayloadURL(ssrContext, cached) {
+	const baseURL = ssrContext.runtimeConfig.app.cdnURL || ssrContext.runtimeConfig.app.baseURL;
+	return routeToPayloadURL(baseURL, ssrContext.url, cached ? void 0 : ssrContext.runtimeConfig.app.buildId, PAYLOAD_FILENAME);
 }
 function getPayloadCacheKey(url) {
 	const { pathname, search } = new URL(url, "http://localhost");

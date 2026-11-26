@@ -12,6 +12,7 @@ interface SharedRuntimeConfig {
 interface SharedPublicRuntimeConfig {
   siteUrl: string,
   githubUser: string,
+  apiBase: string,
   i18n: {
     baseUrl: string,
     defaultLocale: string,
@@ -26,16 +27,7 @@ interface SharedPublicRuntimeConfig {
       domains?: Array<any>,
       defaultForDomains?: Array<any>,
     }>,
-    detectBrowserLanguage: {
-      alwaysRedirect: boolean,
-      cookieCrossOrigin: boolean,
-      cookieDomain: any,
-      cookieKey: string,
-      cookieSecure: boolean,
-      fallbackLocale: string,
-      redirectOn: string,
-      useCookie: boolean,
-    },
+    detectBrowserLanguage: boolean,
     experimental: {
       localeDetector: string,
       typedPages: boolean,
