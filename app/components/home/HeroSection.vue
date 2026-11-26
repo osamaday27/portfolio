@@ -24,8 +24,8 @@ const imgOk = ref(true)
         </div>
       </div>
       <figure class="relative border border-line bg-card aspect-[4/5] w-full max-w-sm lg:max-w-none justify-self-center overflow-hidden">
-        <NuxtImg v-if="imgOk" :src="profile.photo" alt="Ahmed Amasha portrait" class="size-full object-cover grayscale"
-          width="640" height="800" loading="eager" @error="imgOk = false" />
+        <img v-if="imgOk" :src="profile.photo" alt="Ahmed Amasha portrait" class="size-full object-cover grayscale"
+          width="640" height="800" fetchpriority="high" @error="imgOk = false" />
         <figcaption v-if="profile.available" class="absolute bottom-0 inset-x-0 flex items-center gap-2 border-t border-line bg-bg/90 px-4 py-3 text-sm">
           <span class="size-2 bg-olive" />{{ t('hero.available') }}
         </figcaption>
