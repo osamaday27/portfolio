@@ -8,7 +8,7 @@ export const projects: Project[] = [
   p('mousatech-academy', ['education','web'], [], ['dashboard.webp','frontend.webp']),
   p('dermovive-demo', ['ecommerce','web'], [], ['homepage.webp','product-page.webp']),
   p('hospital-sys', ['healthcare','management'], [], ['dashboard.webp','frontend.webp']),
-  p('sncfiro', ['web']), p('pospro', ['management','ecommerce'], [], ['dashboard.webp','reports.webp']),
+  p('snefro', ['web']), p('pospro', ['management','ecommerce'], [], ['dashboard.webp','reports.webp']),
   p('coretech', ['business','web']), p('MousaTech-Agency', ['business','web']), p('digpro', ['web']),
   p('Ahmed-Amasha', ['web']), p('my-portfolio', ['ui','web']), p('theqa', ['web']),
   p('neogym', ['management','web'], [], ['dashboard.webp','frontend.webp']),

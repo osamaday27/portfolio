@@ -5714,7 +5714,7 @@ const projects = [
   p("mousatech-academy", ["education", "web"], [], ["dashboard.webp", "frontend.webp"]),
   p("dermovive-demo", ["ecommerce", "web"], [], ["homepage.webp", "product-page.webp"]),
   p("hospital-sys", ["healthcare", "management"], [], ["dashboard.webp", "frontend.webp"]),
-  p("sncfiro", ["web"]),
+  p("snefro", ["web"]),
   p("pospro", ["management", "ecommerce"], [], ["dashboard.webp", "reports.webp"]),
   p("coretech", ["business", "web"]),
   p("MousaTech-Agency", ["business", "web"]),
