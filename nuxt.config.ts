@@ -4,7 +4,7 @@ const pages = ['/', '/about', '/projects', '/skills', '/contact', ...projects.ma
 const prerender = [...pages, ...pages.map(r => `/ar${r === '/' ? '' : r}`), '/api/cv-status', '/api/github/repos', '/sitemap.xml']
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@vueuse/nuxt', '@nuxt/image'],
+  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@vueuse/nuxt'],
   css: ['~/assets/css/main.css'],
   vite: { plugins: [tailwindcss()] },
   nitro: { prerender: { routes: prerender, crawlLinks: true } },
