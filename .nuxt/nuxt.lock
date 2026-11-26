@@ -1,0 +1,11 @@
+{
+  "pid": 29552,
+  "startedAt": 1795693979298,
+  "interactive": true,
+  "command": "dev",
+  "cwd": "D:/work/portfolio",
+  "port": 3000,
+  "hostname": "::1",
+  "url": "http://[::1]:3000",
+  "baseURL": "/"
+}
