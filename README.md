@@ -1,59 +1,46 @@
-# Ahmed Amasha — Portfolio (Nuxt 4 + Tailwind 4 + i18n)
+# Portfolio API (Laravel 12) — overlay package
 
-## Run
-```
-npm install
-npm run dev        # development
-npm run generate   # static production build -> .output/public
-npm run preview
-```
-
-## Edit content (no component changes needed)
-| What | File |
-|---|---|
-| Projects, categories, stack, screenshots, case studies | `app/data/projects.ts` |
-| Skills (add `level` only when verified) | `app/data/skills.ts` |
-| Experience dates / company | `app/data/experience.ts` |
-| Contact links, photo, CV path | `app/data/navigation.ts` |
-| All translated text, job descriptions | `i18n/locales/en.json`, `ar.json` |
-
-## Images
-- Profile: `public/images/profile/ahmed-profile.webp`
-- Project: `public/images/projects/<slug>/cover.webp` plus file names listed in `images` in `projects.ts`
-  (e.g. `dashboard.webp`, `frontend.webp`, `mobile.webp`, `gallery-01.webp`). Missing files show a "pending" box.
-- CV: `public/files/Ahmed-Amasha-CV.pdf` (button is disabled until the file exists).
-
-## Case study example
-```ts
-{ ...p('my-clinic', ['healthcare']), caseStudy: { overview: '...', role: '...' } }
-```
-Only filled sections are rendered.
-
-## GitHub API
-Public repos of `osamaday27` are fetched server-side (`/api/github/repos`, cached 1h). Optional token to raise rate limits:
-set `NUXT_GITHUB_TOKEN` (server only, never exposed). If GitHub fails, local data is used.
-Because pages are prerendered, GitHub data refreshes on each deploy.
-
-## Deploy on Vercel
-1. Push to GitHub, import the repo in Vercel (framework: Nuxt, auto-detected).
-2. Environment variables: `NUXT_PUBLIC_SITE_URL` = your final domain (used for canonical, hreflang, sitemap); optional `NUXT_GITHUB_TOKEN`.
-3. Every push to `main` redeploys.
-
-## Contact form
-Opens the visitor's email app (mailto) with a prepared message; it never fakes a "sent" state. For direct delivery, connect Resend/Formspree later.
+This folder is **not** a full Laravel app. It is the project-specific code (models, migrations, API, seeders, tests) that you copy over a fresh Laravel 12 install.
 
 ## Requirements
-- **Node.js `^22.22.3`, `^24.15.0` or newer** (Node 24 LTS recommended). `.nvmrc` is included: run `nvm use` (nvm-windows: `nvm install 24 && nvm use 24`).
-- `.npmrc` sets `engine-strict=true`, so `npm install` stops with a clear message on an unsupported Node instead of printing dozens of warnings.
+PHP 8.2+ with the `gd` extension **with WebP support** (`php -r "var_dump(function_exists('imagewebp'));"` must print `true`), Composer 2, MySQL 8 (or SQLite for local tests).
 
-## Troubleshooting log (issues found and resolved)
-| # | Issue | Cause | Resolution |
-|---|---|---|---|
-| 1 | `EBADENGINE` warnings on `npm install` (Node 22.12.0) | Nuxt 4.7 and its toolchain (Vite builder, Nitro, chokidar, Babel 8, undici) require Node >= 22.22.3 / 24.15 | Declared the supported range in `package.json` `engines`, added `.nvmrc` (24) and `engine-strict`. Upgrade Node instead of pinning an old Nuxt, because older Nuxt releases carry known advisories (e.g. an esbuild dev-server file-read issue on Windows). |
-| 2 | Nuxt CLI warning: "Node.js 22.12.0 is unsupported" | Same as #1 | Same fix. |
-| 3 | `npm audit`: 3 high-severity advisories (`sharp`, `ipx`, `@nuxt/image`) | `@nuxt/image` pulls in `sharp` (libvips CVEs). The site serves static `<img>` assets and never used the image optimizer | Removed `@nuxt/image` (unused dependency). Images are lazy-loaded plain `<img>` with explicit aspect ratios. Re-add it only if you need runtime image transforms, and keep it updated. |
-| 4 | `npm audit`: remaining moderate advisories (`minimatch` via `archiver`/`nitropack`) | Transitive build-time tooling inside Nuxt; no runtime exposure in the generated static site; the only "fix" npm offers is downgrading Nuxt | Left as is. They are resolved upstream by Nuxt updates, so run `npm update` periodically. Do not use `npm audit fix --force`. |
-| 5 | Build failed: `vite-json` "expected value at line 1" | `@nuxtjs/i18n` 9.x is incompatible with the Vite 8 (Rolldown) builder used by current Nuxt | Upgraded to `@nuxtjs/i18n` 10. |
-| 6 | Build failed: prerender 404 on `/_ipx/.../ahmed-profile.webp` | Hero used `NuxtImg` for a photo not yet added | Plain `<img>` with graceful fallback; the build passes without the photo. |
-| 7 | CV button always disabled | Missing `/api/cv-status` route | Added the route and prerender it, so the button enables once `public/files/Ahmed-Amasha-CV.pdf` exists. |
-| 8 | Slow first `npm run dev` (~30 s on Windows) | Cold Vite/Nitro start and antivirus scanning of `node_modules` | Expected on first run. Exclude the project folder from real-time scanning for faster starts. |
+## Install (PowerShell)
+```powershell
+composer create-project laravel/laravel api "^12.0"
+cd api
+php artisan install:api                      # installs Sanctum, answer "yes" to run migrations
+Copy-Item -Recurse -Force ..\laravel-api-overlay\* .   # copy this package over the app (overwrites User model, bootstrap/app.php, routes/api.php)
+Get-Content ..\laravel-api-overlay\.env.additions | Add-Content .env
+# edit .env: DB_*, ADMIN_EMAIL, ADMIN_PASSWORD
+php artisan migrate --seed
+php artisan storage:link
+php artisan serve                            # http://localhost:8000
+php artisan queue:work                       # separate terminal (thumbnails + contact emails)
+php artisan test
+```
+
+## Architecture
+| Layer | Where | Rule |
+|---|---|---|
+| Controllers | `Http/Controllers/Api/{Public,Admin}` | receive request, return response only |
+| Validation | `Http/Requests` | every write goes through a Form Request; section rules live in `Support/SettingSchema` |
+| Business logic | `Actions/*`, `Services/*` | multi-step writes run inside `DB::transaction()` |
+| Output shape | `Http/Resources` | one place defines the JSON contract |
+| Slow work | `Jobs/GenerateThumbnail`, `Mail/ContactReceived` | queued (database queue; Redis in production) |
+| Authorization | Sanctum token + `Gate::define('manage-site')` | admin routes use `auth:sanctum` + `can:manage-site` |
+| Caching | `Support/PublicCache` | public reads cached forever, flushed by model observers on any change |
+
+Other decisions: soft deletes for projects, DB indexes on `(is_published, sort_order)` and image lookups, eager loading (`with('images')`) everywhere (no N+1), uploads converted to WebP and never accepted as SVG, contact messages are saved before mail is queued (nothing is lost if mail fails), login and contact are throttled (5/min).
+
+## Endpoints (`/api/v1`)
+Public: `GET site | skills | experience | projects | projects/{slug}`, `POST contact`
+Auth: `POST auth/login`, `POST auth/logout`, `GET auth/me`
+Admin (Bearer token): `projects` (CRUD, `PATCH projects/reorder`), `projects/{id}/images` (POST, PUT/PATCH, DELETE),
+`skill-groups` (CRUD, nested `skills`), `experiences` (CRUD), `GET settings`, `PUT settings/{hero|about|contact|seo|stats}`,
+`POST profile/photo`, `POST profile/cv`, `messages` (list, read, delete)
+
+Image upload: `multipart/form-data` with `image` (jpg/png/webp, <= 8 MB) and `type` = `cover|gallery|dashboard|frontend|mobile`. A new `cover` replaces the old one.
+
+## Data notes
+`database/seeders/data/site.json` was generated from the current portfolio data: project categories are an unverified first proposal, project descriptions/stack are empty (nothing invented), no statistics. Edit all of it from the dashboard. Seeding never overwrites existing rows.
