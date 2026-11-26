@@ -3,7 +3,7 @@ import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { isMainThread, parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, getResponseHeader, createError, sendRedirect, proxyRequest, getRequestHeader, getRequestProtocol, getRequestHost as getRequestHost$1, getRequestURL, readRawBody, isError, setResponseHeaders, setResponseStatus, send, setResponseHeader, appendResponseHeader, getRequestHeaders, getResponseStatus, getCookie, setCookie, sanitizeStatusCode, removeResponseHeader, getRouterParam, writeEarlyHints, getQuery as getQuery$1, getRequestWebStream, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, readBody, setHeader, toWebRequest } from 'file://D:/work/portfolio/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, getResponseHeader, createError, sendRedirect, proxyRequest, getRequestHeader, getRequestProtocol, getRequestHost as getRequestHost$1, getRequestURL, readRawBody, isError, setResponseHeaders, setResponseStatus, send, setResponseHeader, appendResponseHeader, getRequestHeaders, getResponseStatus, getCookie, setCookie, sanitizeStatusCode, removeResponseHeader, getRouterParam, writeEarlyHints, getQuery as getQuery$1, getRequestWebStream, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, readBody, setHeader, toWebRequest } from 'file://D:/work/portfolio/node_modules/h3/dist/index.mjs';
 import { escapeHtml } from 'file://D:/work/portfolio/node_modules/@vue/shared/dist/shared.cjs.js';
 import viteNodeEntry_mjs from 'file:///D:/work/portfolio/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs';
 import { viteNodeFetch } from 'file:///D:/work/portfolio/node_modules/@nuxt/vite-builder/dist/vite-node.mjs';
@@ -42,13 +42,12 @@ import { createRouterMatcher } from 'file://D:/work/portfolio/node_modules/@nuxt
 import _Z4Vm0BJMJeyU_KFYzGBgSOBoZ4JOQn4jYmko_KtDwU from 'file:///D:/work/portfolio/node_modules/@nuxt/vite-builder/dist/ssr-sourcemap.mjs';
 import _LB91z6Ht2T49ncvhFWMKIA26eT4mdBc7tIFl06yLKKs from 'file:///D:/work/portfolio/node_modules/@nuxt/vite-builder/dist/vite-node-warmup.mjs';
 import { fileURLToPath } from 'node:url';
-import { dirname as dirname$1, resolve as resolve$1, isAbsolute } from 'file://D:/work/portfolio/node_modules/pathe/dist/index.mjs';
+import { dirname as dirname$1, resolve as resolve$1 } from 'file://D:/work/portfolio/node_modules/pathe/dist/index.mjs';
 import { walkResolver, resolveTags } from 'file://D:/work/portfolio/node_modules/unhead/dist/utils.mjs';
 import { PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin, SafeInputPlugin } from 'file://D:/work/portfolio/node_modules/unhead/dist/plugins.mjs';
 import { renderToSimpleStream } from 'file://D:/work/portfolio/node_modules/vue/server-renderer/index.mjs';
 import { HookableCore } from 'file://D:/work/portfolio/node_modules/hookable/dist/index.mjs';
 import { DeprecationsPlugin } from 'file://D:/work/portfolio/node_modules/unhead/dist/legacy.mjs';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://D:/work/portfolio/node_modules/ipx/dist/index.mjs';
 
 const serverAssets = [{"baseName":"server","dir":"D:/work/portfolio/server/assets"}];
 
@@ -1145,19 +1144,7 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "githubToken": "",
-  "ipx": {
-    "baseURL": "/_ipx",
-    "alias": {},
-    "fs": {
-      "dir": [
-        "D:/work/portfolio/public"
-      ]
-    },
-    "http": {
-      "domains": []
-    }
-  }
+  "githubToken": ""
 };
 const envOptions = {
   prefix: "NITRO_",
@@ -5352,24 +5339,6 @@ async function getIslandContext(event) {
 	};
 }
 
-const _qNxPkE = lazyEventHandler(() => {
-  const opts = useRuntimeConfig().ipx || {};
-  const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
-  const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
-  const httpStorage = opts.http?.domains ? ipxHttpStorage({ ...opts.http }) : void 0;
-  if (!fsStorage && !httpStorage) {
-    throw new Error("IPX storage is not configured!");
-  }
-  const ipxOptions = {
-    ...opts,
-    storage: fsStorage || httpStorage,
-    httpStorage
-  };
-  const ipx = createIPX(ipxOptions);
-  const ipxHandler = createIPXH3Handler(ipx);
-  return useBase(opts.baseURL, ipxHandler);
-});
-
 const _lazy_n8en1F = () => Promise.resolve().then(function () { return cvStatus_get$1; });
 const _lazy_P8a9bG = () => Promise.resolve().then(function () { return repos_get$1; });
 const _lazy_HCas9p = () => Promise.resolve().then(function () { return sitemap_xml$1; });
@@ -5385,7 +5354,6 @@ const handlers = [
   { route: '/__nuxt_dev__/error/**', handler: _lazy_8rZjYQ, lazy: true, middleware: false, method: undefined },
   { route: '/_i18n/:hash/:locale/messages.json', handler: _G7s3ac, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _qNxPkE, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_tcOJLS, lazy: true, middleware: false, method: undefined }
 ];
 

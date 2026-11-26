@@ -109,12 +109,6 @@
       "#internal-i18n-types": [
         "../node_modules/@nuxtjs/i18n/dist/types.d.mts"
       ],
-      "#image": [
-        "../node_modules/@nuxt/image/dist/runtime"
-      ],
-      "#image/*": [
-        "../node_modules/@nuxt/image/dist/runtime/*"
-      ],
       "#vue-router": [
         "../node_modules/vue-router"
       ],
@@ -143,7 +137,7 @@
         "../node_modules/crossws"
       ],
       "#build/server-routes": [
-        "./types/shared-server-routes.d.ts"
+        "./types/shared-server-routes"
       ],
       "#build": [
         "."

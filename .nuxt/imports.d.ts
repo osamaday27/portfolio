@@ -41,4 +41,3 @@ export { Category, Project, GitHubRepo, Skill, SkillGroup } from '../app/types/i
 export { usePreferences } from '../app/stores/preferences';
 export { defineStore, acceptHMRUpdate, usePinia, storeToRefs } from '../node_modules/@pinia/nuxt/dist/runtime/composables';
 export { useI18n } from 'vue-i18n';
-export { useImage } from '../node_modules/@nuxt/image/dist/runtime/composables';

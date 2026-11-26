@@ -1,7 +1,6 @@
 /// <reference types="@pinia/nuxt" />
 /// <reference types="@nuxtjs/i18n" />
 /// <reference types="@vueuse/nuxt" />
-/// <reference types="@nuxt/image" />
 /// <reference types="@nuxt/devtools-onboard" />
 /// <reference types="@nuxt/telemetry" />
 /// <reference path="types/nitro-layouts.d.ts" />

@@ -244,7 +244,6 @@ declare global {
   const useI18nPreloadKeys: typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index').useI18nPreloadKeys
   const useId: typeof import('vue').useId
   const useIdle: typeof import('../../node_modules/@vueuse/core').useIdle
-  const useImage: typeof import('../../node_modules/@nuxt/image/dist/runtime/composables').useImage
   const useInfiniteScroll: typeof import('../../node_modules/@vueuse/core').useInfiniteScroll
   const useIntersectionObserver: typeof import('../../node_modules/@vueuse/core').useIntersectionObserver
   const useInterval: typeof import('../../node_modules/@vueuse/core').useInterval
@@ -701,7 +700,6 @@ declare module 'vue' {
     readonly useI18nPreloadKeys: UnwrapRef<typeof import('../../node_modules/@nuxtjs/i18n/dist/runtime/composables/index')['useI18nPreloadKeys']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useIdle: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useIdle']>
-    readonly useImage: UnwrapRef<typeof import('../../node_modules/@nuxt/image/dist/runtime/composables')['useImage']>
     readonly useInfiniteScroll: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useInfiniteScroll']>
     readonly useIntersectionObserver: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useIntersectionObserver']>
     readonly useInterval: UnwrapRef<typeof import('../../node_modules/@vueuse/core')['useInterval']>

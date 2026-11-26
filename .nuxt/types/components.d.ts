@@ -103,8 +103,18 @@ interface _GlobalComponents {
    * @see https://nuxt.com/docs/4.x/api/components/nuxt-announcer
    */
   NuxtAnnouncer: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-announcer")['default']
-  NuxtImg: typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']
-  NuxtPicture: typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']
+  /**
+   * Renders an optimized image through the Nuxt Image module.
+   *
+   * @see https://nuxt.com/docs/4.x/api/components/nuxt-img
+   */
+  NuxtImg: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
+  /**
+   * Renders responsive optimized images through the Nuxt Image module.
+   *
+   * @see https://nuxt.com/docs/4.x/api/components/nuxt-picture
+   */
+  NuxtPicture: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
   NuxtLinkLocale: typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']
   SwitchLocalePathLink: typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']
   /**
@@ -227,8 +237,22 @@ interface _GlobalComponents {
    * @see https://nuxt.com/docs/4.x/api/components/nuxt-announcer
    */
   LazyNuxtAnnouncer: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-announcer")['default']>
-  LazyNuxtImg: LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtImg.vue")['default']>
-  LazyNuxtPicture: LazyComponent<typeof import("../../node_modules/@nuxt/image/dist/runtime/components/NuxtPicture.vue")['default']>
+  /**
+   * Lazy-loaded version of `<NuxtImg>`.
+   *
+   * Renders an optimized image through the Nuxt Image module.
+   *
+   * @see https://nuxt.com/docs/4.x/api/components/nuxt-img
+   */
+  LazyNuxtImg: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
+  /**
+   * Lazy-loaded version of `<NuxtPicture>`.
+   *
+   * Renders responsive optimized images through the Nuxt Image module.
+   *
+   * @see https://nuxt.com/docs/4.x/api/components/nuxt-picture
+   */
+  LazyNuxtPicture: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
   LazyNuxtLinkLocale: LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/NuxtLinkLocale")['default']>
   LazySwitchLocalePathLink: LazyComponent<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/components/SwitchLocalePathLink")['default']>
   /**
